@@ -1,0 +1,12 @@
+.aside{
+  background: #fff;
+  .content{
+    padding-right: $doubleGutter;
+    padding-top: $doubleGutter;
+    padding-bottom: $gutter;
+  }
+  .avatar{
+    padding-left: $doubleGutter;
+    padding-top: $doubleGutter;
+  }
+}

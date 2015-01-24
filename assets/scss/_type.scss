@@ -1,0 +1,17 @@
+.type{
+  h1{
+    font-family: $font1;
+    font-size: 3.6em;
+    letter-spacing: -3px;
+    line-height: 1.4;
+  }
+  h2,h3,h4,h5,h6{
+    font-weight: bold;
+    padding-bottom: $gutter;
+    font-size: 1.6em;
+    letter-spacing: 0px;
+  }
+  p{
+    padding-bottom: $gutter;
+  }
+}

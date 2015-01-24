@@ -1,0 +1,21 @@
+.social{
+  li{
+    float: left;
+    margin-right: 4px;
+    *{
+      line-height: 42px;
+    }
+    a{
+      width: 42px;
+      display: block;
+      background: #333;
+      color: #fff;
+      font-size: 1.2em;
+      text-align: center;
+      border-radius: 50%;
+      &.twitter{
+
+      }
+    }
+  }
+}

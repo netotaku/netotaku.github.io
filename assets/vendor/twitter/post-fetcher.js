@@ -8,15 +8,134 @@
 *  Github: https://github.com/jasonmayes/Twitter-Post-Fetcher
 *  Updates will be posted to this site.
 *********************************************************************/
-(function(v,n){"function"===typeof define&&define.amd?define([],n):"object"===typeof exports?module.exports=n():n()})(this,function(){function v(a){return a.replace(/<b[^>]*>(.*?)<\/b>/gi,function(a,f){return f}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function n(a){a=a.getElementsByTagName("a");for(var c=a.length-1;0<=c;c--)a[c].setAttribute("target","_blank")}function m(a,c){for(var f=[],g=new RegExp("(^| )"+c+"( |$)"),h=a.getElementsByTagName("*"),b=0,k=h.length;b<
-k;b++)g.test(h[b].className)&&f.push(h[b]);return f}var A="",k=20,B=!0,t=[],w=!1,u=!0,q=!0,x=null,y=!0,C=!0,z=null,D=!0,E=!1,r=!0,F={fetch:function(a){void 0===a.maxTweets&&(a.maxTweets=20);void 0===a.enableLinks&&(a.enableLinks=!0);void 0===a.showUser&&(a.showUser=!0);void 0===a.showTime&&(a.showTime=!0);void 0===a.dateFunction&&(a.dateFunction="default");void 0===a.showRetweet&&(a.showRetweet=!0);void 0===a.customCallback&&(a.customCallback=null);void 0===a.showInteraction&&(a.showInteraction=!0);
-void 0===a.showImages&&(a.showImages=!1);void 0===a.linksInNewWindow&&(a.linksInNewWindow=!0);if(w)t.push(a);else{w=!0;A=a.domId;k=a.maxTweets;B=a.enableLinks;q=a.showUser;u=a.showTime;C=a.showRetweet;x=a.dateFunction;z=a.customCallback;D=a.showInteraction;E=a.showImages;r=a.linksInNewWindow;var c=document.createElement("script");c.type="text/javascript";c.src="//cdn.syndication.twimg.com/widgets/timelines/"+a.id+"?&lang="+(a.lang||"en")+"&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+
-Math.random();document.getElementsByTagName("head")[0].appendChild(c)}},callback:function(a){var c=document.createElement("div");c.innerHTML=a.body;"undefined"===typeof c.getElementsByClassName&&(y=!1);a=[];var f=[],g=[],h=[],b=[],p=[],e=0;if(y)for(c=c.getElementsByClassName("tweet");e<c.length;){0<c[e].getElementsByClassName("retweet-credit").length?b.push(!0):b.push(!1);if(!b[e]||b[e]&&C)a.push(c[e].getElementsByClassName("e-entry-title")[0]),p.push(c[e].getAttribute("data-tweet-id")),f.push(c[e].getElementsByClassName("p-author")[0]),
-g.push(c[e].getElementsByClassName("dt-updated")[0]),void 0!==c[e].getElementsByClassName("inline-media")[0]?h.push(c[e].getElementsByClassName("inline-media")[0]):h.push(void 0);e++}else for(c=m(c,"tweet");e<c.length;)a.push(m(c[e],"e-entry-title")[0]),p.push(c[e].getAttribute("data-tweet-id")),f.push(m(c[e],"p-author")[0]),g.push(m(c[e],"dt-updated")[0]),void 0!==m(c[e],"inline-media")[0]?h.push(m(c[e],"inline-media")[0]):h.push(void 0),0<m(c[e],"retweet-credit").length?b.push(!0):b.push(!1),e++;
-a.length>k&&(a.splice(k,a.length-k),f.splice(k,f.length-k),g.splice(k,g.length-k),b.splice(k,b.length-k),h.splice(k,h.length-k));c=[];e=a.length;for(b=0;b<e;){if("string"!==typeof x){var d=g[b].getAttribute("datetime"),l=new Date(g[b].getAttribute("datetime").replace(/-/g,"/").replace("T"," ").split("+")[0]),d=x(l,d);g[b].setAttribute("aria-label",d);if(a[b].innerText)if(y)g[b].innerText=d;else{var l=document.createElement("p"),G=document.createTextNode(d);l.appendChild(G);l.setAttribute("aria-label",
-d);g[b]=l}else g[b].textContent=d}d="";B?(r&&(n(a[b]),q&&n(f[b])),q&&(d+='<div class="user">'+v(f[b].innerHTML)+"</div>"),d+='<p class="tweet">'+v(a[b].innerHTML)+"</p>",u&&(d+='<p class="timePosted">'+g[b].getAttribute("aria-label")+"</p>")):a[b].innerText?(q&&(d+='<p class="user">'+f[b].innerText+"</p>"),d+='<p class="tweet">'+a[b].innerText+"</p>",u&&(d+='<p class="timePosted">'+g[b].innerText+"</p>")):(q&&(d+='<p class="user">'+f[b].textContent+"</p>"),d+='<p class="tweet">'+a[b].textContent+
-"</p>",u&&(d+='<p class="timePosted">'+g[b].textContent+"</p>"));D&&(d+='<p class="interact"><a href="https://twitter.com/intent/tweet?in_reply_to='+p[b]+'" class="twitter_reply_icon"'+(r?' target="_blank">':">")+'Reply</a><a href="https://twitter.com/intent/retweet?tweet_id='+p[b]+'" class="twitter_retweet_icon"'+(r?' target="_blank">':">")+'Retweet</a><a href="https://twitter.com/intent/favorite?tweet_id='+p[b]+'" class="twitter_fav_icon"'+(r?' target="_blank">':">")+"Favorite</a></p>");E&&void 0!==
-h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0],l=decodeURIComponent(l).split('"')[1]):l=void 0,d+='<div class="media"><img src="'+l+'" alt="Image from tweet" /></div>');c.push(d);b++}if(null===z){a=c.length;f=0;g=document.getElementById(A);for(h="<ul>";f<a;)h+="<li>"+c[f]+"</li>",f++;g.innerHTML=h+"</ul>"}else z(c);w=!1;0<t.length&&(F.fetch(t[0]),t.splice(0,1))}};return window.twitterFetcher=F});
+
+(function(v, n) {
+  "function" === typeof define && define.amd ? define([], n) : "object" === typeof exports ? module.exports = n() : n()
+})(this, function() {
+  function v(a) {
+    return a.replace(/<b[^>]*>(.*?)<\/b>/gi, function(a, f) {
+      return f
+    }).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi, "")
+  }
+
+  function n(a) {
+    a = a.getElementsByTagName("a");
+    for (var c = a.length - 1; 0 <= c; c--) a[c].setAttribute("target", "_blank")
+    }
+
+    function m(a, c) {
+      for (var f = [], g = new RegExp("(^| )" + c + "( |$)"), h = a.getElementsByTagName("*"), b = 0, k = h.length; b <
+        k; b++) g.test(h[b].className) && f.push(h[b]);
+        return f
+      }
+      var A = "",
+      k = 20,
+      B = !0,
+      t = [],
+      w = !1,
+      u = !0,
+      q = !0,
+      x = null,
+      y = !0,
+      C = !0,
+      z = null,
+      D = !0,
+      E = !1,
+      r = !0,
+      F = {
+        fetch: function(a) {
+          void 0 === a.maxTweets && (a.maxTweets = 20);
+          void 0 === a.enableLinks && (a.enableLinks = !0);
+          void 0 === a.showUser && (a.showUser = !0);
+          void 0 === a.showTime && (a.showTime = !0);
+          void 0 === a.dateFunction && (a.dateFunction = "default");
+          void 0 === a.showRetweet && (a.showRetweet = !0);
+          void 0 === a.customCallback && (a.customCallback = null);
+          void 0 === a.showInteraction && (a.showInteraction = !0);
+          void 0 === a.showImages && (a.showImages = !1);
+          void 0 === a.linksInNewWindow && (a.linksInNewWindow = !0);
+          if (w) t.push(a);
+          else {
+            w = !0;
+            A = a.domId;
+            k = a.maxTweets;
+            B = a.enableLinks;
+            q = a.showUser;
+            u = a.showTime;
+            C = a.showRetweet;
+            x = a.dateFunction;
+            z = a.customCallback;
+            D = a.showInteraction;
+            E = a.showImages;
+            r = a.linksInNewWindow;
+            var c = document.createElement("script");
+            c.type = "text/javascript";
+            c.src = "//cdn.syndication.twimg.com/widgets/timelines/" + a.id + "?&lang=" + (a.lang || "en") + "&callback=twitterFetcher.callback&suppress_response_codes=true&rnd=" +
+            Math.random();
+            document.getElementsByTagName("head")[0].appendChild(c)
+          }
+        },
+        callback: function(a) {
+          var c = document.createElement("div");
+          c.innerHTML = a.body;
+          "undefined" === typeof c.getElementsByClassName && (y = !1);
+          a = [];
+          var f = [],
+          g = [],
+          h = [],
+          b = [],
+          p = [],
+          e = 0;
+          if (y)
+            for (c = c.getElementsByClassName("tweet"); e < c.length;) {
+              0 < c[e].getElementsByClassName("retweet-credit").length ? b.push(!0) : b.push(!1);
+              if (!b[e] || b[e] && C) a.push(c[e].getElementsByClassName("e-entry-title")[0]), p.push(c[e].getAttribute("data-tweet-id")), f.push(c[e].getElementsByClassName("p-author")[0]),
+                g.push(c[e].getElementsByClassName("dt-updated")[0]), void 0 !== c[e].getElementsByClassName("inline-media")[0] ? h.push(c[e].getElementsByClassName("inline-media")[0]) : h.push(void 0);
+                e++
+              } else
+                for (c = m(c, "tweet"); e < c.length;) a.push(m(c[e], "e-entry-title")[0]), p.push(c[e].getAttribute("data-tweet-id")), f.push(m(c[e], "p-author")[0]), g.push(m(c[e], "dt-updated")[0]), void 0 !== m(c[e], "inline-media")[0] ? h.push(m(c[e], "inline-media")[0]) : h.push(void 0), 0 < m(c[e], "retweet-credit").length ? b.push(!0) : b.push(!1), e++;
+                a.length > k && (a.splice(k, a.length - k), f.splice(k, f.length - k), g.splice(k, g.length - k), b.splice(k, b.length - k), h.splice(k, h.length - k));
+                c = [];
+                e = a.length;
+                for (b = 0; b < e;) {
+                  if ("string" !== typeof x) {
+                    var d = g[b].getAttribute("datetime"),
+                    l = new Date(g[b].getAttribute("datetime").replace(/-/g, "/").replace("T", " ").split("+")[0]),
+                    d = x(l, d);
+                    g[b].setAttribute("aria-label", d);
+                    if (a[b].innerText)
+                      if (y) g[b].innerText = d;
+                      else {
+                        var l = document.createElement("p"),
+                        G = document.createTextNode(d);
+                        l.appendChild(G);
+                        l.setAttribute("aria-label",
+                        d);
+                        g[b] = l
+                      } else g[b].textContent = d
+                      }
+                      d = "";
+                      B ? (r && (n(a[b]), q && n(f[b])), q && (d += '<div class="user">' + v(f[b].innerHTML) + "</div>"), d += '<p class="tweet">' + v(a[b].innerHTML) + "</p>", u && (d += '<p class="timePosted">' + g[b].getAttribute("aria-label") + "</p>")) : a[b].innerText ? (q && (d += '<p class="user">' + f[b].innerText + "</p>"), d += '<p class="tweet">' + a[b].innerText + "</p>", u && (d += '<p class="timePosted">' + g[b].innerText + "</p>")) : (q && (d += '<p class="user">' + f[b].textContent + "</p>"), d += '<p class="tweet">' + a[b].textContent +
+                      "</p>", u && (d += '<p class="timePosted">' + g[b].textContent + "</p>"));
+                      D && (d += '<p class="interact"><a href="https://twitter.com/intent/tweet?in_reply_to=' + p[b] + '" class="fa fa-reply"' + (r ? ' target="_blank">' : ">") + '</a> <a href="https://twitter.com/intent/retweet?tweet_id=' + p[b] + '" class="fa fa-retweet"' + (r ? ' target="_blank">' : ">") + '</a><a href="https://twitter.com/intent/favorite?tweet_id=' + p[b] + '" class="fa fa-star"' + (r ? ' target="_blank">' : ">") + "</a></p>");
+                      E && void 0 !==
+                      h[b] && (l = h[b], void 0 !== l ? (l = l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0], l = decodeURIComponent(l).split('"')[1]) : l = void 0, d += '<div class="media"><img src="' + l + '" alt="Image from tweet" /></div>');
+                      c.push(d);
+                      b++
+                    }
+                    if (null === z) {
+                      a = c.length;
+                      f = 0;
+                      g = document.getElementById(A);
+                      for (h = "<ul>"; f < a;) h += "<li>" + c[f] + "</li>", f++;
+                      g.innerHTML = h + "</ul>"
+                    } else z(c);
+                    w = !1;
+                    0 < t.length && (F.fetch(t[0]), t.splice(0, 1))
+                  }
+                };
+                return window.twitterFetcher = F
+              });
 
 
 /**
@@ -28,7 +147,7 @@ h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[
 * Now go back to settings page, and then go back to widgets page and
 * you should see the widget you just created. Click edit.
 * Look at the URL in your web browser, you will see a long number like this:
-* 345735908357048478
+* 320201997074710529
 * Use this as your ID below instead!
 */
 
@@ -82,103 +201,97 @@ h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[
 // A simple example to get my latest tweet and write to a HTML element with
 // id "example1". Also automatically hyperlinks URLS and user mentions and
 // hashtags.
-var config1 = {
-  "id": '345170787868762112',
-  "domId": 'example1',
-  "maxTweets": 1,
-  "enableLinks": true
-};
-twitterFetcher.fetch(config1);
 
 
-// ##### Simple example 2 #####
-// A simple example to get my latest 5 of my favourite tweets and write to a
-// HTML element with id "talk". Also automatically hyperlinks URLS and user
-// mentions and hashtags but does not display time of post. We also make the
-// request to Twitter specifiying we would like results where possible in
-// English language.
-var config2 = {
-  "id": '347099293930377217',
-  "domId": 'example2',
-  "maxTweets": 5,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": true,
-  "lang": 'en'
-};
-twitterFetcher.fetch(config2);
-
-
-// ##### Simple example 3 #####
-// A simple example to get latest 5 tweets for #API tag and shows any images
-// attached to tweets.
-var config3 = {
-  "id": '502160051226681344',
-  "domId": 'example3',
-  "maxTweets": 5,
-  "enableLinks": true,
-  "showImages": true
-};
-twitterFetcher.fetch(config3);
-
-
-// ##### Advanced example #####
-// An advance example to get latest 5 posts using hashtag #API and write to a
-// HTML element with id "tweets2" without showing user details and using a
-// custom format to display the date/time of the post, and does not show
-// retweets.
-var config4 = {
-  "id": '345690956013633536',
-  "domId": 'example4',
-  "maxTweets": 3,
-  "enableLinks": true,
-  "showUser": false,
-  "showTime": true,
-  "dateFunction": dateFormatter,
-  "showRetweet": false
-};
-
-// For advanced example which allows you to customize how tweet time is
-// formatted you simply define a function which takes a JavaScript date as a
-// parameter and returns a string!
-// See http://www.w3schools.com/jsref/jsref_obj_date.asp for properties
-// of a Date object.
-function dateFormatter(date) {
-  return date.toTimeString();
-}
-
-twitterFetcher.fetch(config4);
-
-
-// ##### Advanced example 2 #####
-// Similar as previous, except this time we pass a custom function to render the
-// tweets ourself! Useful if you need to know exactly when data has returned or
-// if you need full control over the output.
-
-var config5 = {
-  "id": '345690956013633536',
-  "domId": '',
-  "maxTweets": 3,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": true,
-  "dateFunction": '',
-  "showRetweet": false,
-  "customCallback": handleTweets,
-  "showInteraction": false
-};
-
-function handleTweets(tweets){
-  var x = tweets.length;
-  var n = 0;
-  var element = document.getElementById('example5');
-  var html = '<ul>';
-  while(n < x) {
-    html += '<li>' + tweets[n] + '</li>';
-    n++;
-  }
-  html += '</ul>';
-  element.innerHTML = html;
-}
-
-twitterFetcher.fetch(config5);
+//
+// // ##### Simple example 2 #####
+// // A simple example to get my latest 5 of my favourite tweets and write to a
+// // HTML element with id "talk". Also automatically hyperlinks URLS and user
+// // mentions and hashtags but does not display time of post. We also make the
+// // request to Twitter specifiying we would like results where possible in
+// // English language.
+// var config2 = {
+//   "id": '347099293930377217',
+//   "domId": 'example2',
+//   "maxTweets": 5,
+//   "enableLinks": true,
+//   "showUser": true,
+//   "showTime": true,
+//   "lang": 'en'
+// };
+// twitterFetcher.fetch(config2);
+//
+//
+// // ##### Simple example 3 #####
+// // A simple example to get latest 5 tweets for #API tag and shows any images
+// // attached to tweets.
+// var config3 = {
+//   "id": '502160051226681344',
+//   "domId": 'example3',
+//   "maxTweets": 5,
+//   "enableLinks": true,
+//   "showImages": true
+// };
+// twitterFetcher.fetch(config3);
+//
+//
+// // ##### Advanced example #####
+// // An advance example to get latest 5 posts using hashtag #API and write to a
+// // HTML element with id "tweets2" without showing user details and using a
+// // custom format to display the date/time of the post, and does not show
+// // retweets.
+// var config4 = {
+//   "id": '345690956013633536',
+//   "domId": 'example4',
+//   "maxTweets": 3,
+//   "enableLinks": true,
+//   "showUser": false,
+//   "showTime": true,
+//   "dateFunction": dateFormatter,
+//   "showRetweet": false
+// };
+//
+// // For advanced example which allows you to customize how tweet time is
+// // formatted you simply define a function which takes a JavaScript date as a
+// // parameter and returns a string!
+// // See http://www.w3schools.com/jsref/jsref_obj_date.asp for properties
+// // of a Date object.
+// function dateFormatter(date) {
+//   return date.toTimeString();
+// }
+//
+// twitterFetcher.fetch(config4);
+//
+//
+// // ##### Advanced example 2 #####
+// // Similar as previous, except this time we pass a custom function to render the
+// // tweets ourself! Useful if you need to know exactly when data has returned or
+// // if you need full control over the output.
+//
+// var config5 = {
+//   "id": '345690956013633536',
+//   "domId": '',
+//   "maxTweets": 3,
+//   "enableLinks": true,
+//   "showUser": true,
+//   "showTime": true,
+//   "dateFunction": '',
+//   "showRetweet": false,
+//   "customCallback": handleTweets,
+//   "showInteraction": false
+// };
+//
+// function handleTweets(tweets){
+//   var x = tweets.length;
+//   var n = 0;
+//   var element = document.getElementById('example5');
+//   var html = '<ul>';
+//   while(n < x) {
+//     html += '<li>' + tweets[n] + '</li>';
+//     n++;
+//   }
+//   html += '</ul>';
+//   element.innerHTML = html;
+// }
+//
+// twitterFetcher.fetch(config5);

@@ -63,8 +63,169 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 1, ../scss/_globals.scss */
+html {
+  background: #333;
+  color: #222;
+  line-height: 1.75;
+  font-size: 1em;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: sans-serif;
+}
+
+/* line 22, ../scss/_globals.scss */
+a {
+  color: #c00;
+}
+/* line 24, ../scss/_globals.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 29, ../scss/_globals.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 34, ../scss/_globals.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 2, ../scss/_type.scss */
+.type h1 {
+  font-family: "Archivo Black";
+  font-size: 3.6em;
+  letter-spacing: -3px;
+  line-height: 1.4;
+}
+/* line 8, ../scss/_type.scss */
+.type h2, .type h3, .type h4, .type h5, .type h6 {
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 1.6em;
+  letter-spacing: 0px;
+}
+/* line 14, ../scss/_type.scss */
+.type p {
+  padding-bottom: 20px;
+}
+
 /* line 1, ../scss/_hero.scss */
 .hero {
   height: 450px;
   background: #eee;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 6, ../scss/_hero.scss */
+.hero .caption {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+}
+
+/* line 2, ../scss/_social.scss */
+.social li {
+  float: left;
+  margin-right: 4px;
+}
+/* line 5, ../scss/_social.scss */
+.social li * {
+  line-height: 42px;
+}
+/* line 8, ../scss/_social.scss */
+.social li a {
+  width: 42px;
+  display: block;
+  background: #333;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* line 1, ../scss/_aside.scss */
+.aside {
+  background: #fff;
+}
+/* line 3, ../scss/_aside.scss */
+.aside .content {
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+/* line 8, ../scss/_aside.scss */
+.aside .avatar {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+/* line 1, ../scss/_footer.scss */
+.footer {
+  padding: 40px 0px;
+  padding-bottom: 0px;
+  background: #222;
+  color: #ccc;
+}
+/* line 6, ../scss/_footer.scss */
+.footer a {
+  color: #ccc;
+}
+/* line 9, ../scss/_footer.scss */
+.footer .type {
+  padding-bottom: 40px;
+}
+/* line 12, ../scss/_footer.scss */
+.footer h2 {
+  padding-bottom: 0px;
+}
+
+/* line 1, ../scss/_latest-tweet.scss */
+.latest-tweet {
+  margin-bottom: 40px;
+  color: #fff;
+}
+/* line 4, ../scss/_latest-tweet.scss */
+.latest-tweet a {
+  color: #fff;
+}
+/* line 7, ../scss/_latest-tweet.scss */
+.latest-tweet .user {
+  display: none;
+}
+/* line 10, ../scss/_latest-tweet.scss */
+.latest-tweet .tweet {
+  font-size: 2em;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  font-family: georgia;
+}
+/* line 16, ../scss/_latest-tweet.scss */
+.latest-tweet .interact {
+  margin-top: 4px;
+}
+/* line 18, ../scss/_latest-tweet.scss */
+.latest-tweet .interact .fa {
+  font-size: 0.8em;
+  text-align: center;
+  display: block;
+  float: left;
+  text-decoration: none;
+  margin-right: 6px;
+  line-height: 24px;
+  width: 28px;
+  background: #444;
+  border-radius: 4px;
 }

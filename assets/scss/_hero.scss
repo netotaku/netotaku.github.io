@@ -1,4 +1,14 @@
 .hero{
   height: 450px;
   background: #eee;
+  position: relative;
+  margin-bottom: $doubleGutter;
+  .caption{
+    width: 100%;
+    position: absolute;
+    bottom: $doubleGutter;
+    left: 0px;
+  }
+  .social{
+  }
 }
