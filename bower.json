@@ -1,0 +1,28 @@
+{
+  "name": "netotaku.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/netotaku/netotaku.github.io",
+  "authors": [
+    "Nick Clarkson <nikclarkson@gmail.com>"
+  ],
+  "description": "Github default site",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "https://github.com/dhg/Skeleton.git#~2.0.4"
+  }
+}
