@@ -1,6 +1,9 @@
+
+// namespace the typography
+
 .type{
   h1{
-    font-family: $font1;
+    font-family: $headingFont;
     font-size: 3.6em;
     letter-spacing: -3px;
     line-height: 1.4;

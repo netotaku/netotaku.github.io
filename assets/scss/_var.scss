@@ -1,10 +1,19 @@
+
+// future proof breakpoints
 $SM: 400px;
 $MD: 750px;
 $LR: 1000px;
 $XL: 1200px;
 
-$font1: "Archivo Black";
+// fonts
+$headingFont: "Archivo Black";
+$bodyFont: sans-serif;
 
-$link: #c00;
+// whitespace
 $gutter: 20px;
 $doubleGutter: $gutter*2;
+
+// colours
+$highlight: #c00;
+$midlight: "";
+$lowlight: #333;
