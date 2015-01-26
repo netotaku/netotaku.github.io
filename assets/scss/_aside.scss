@@ -10,3 +10,16 @@
     padding-top: $doubleGutter;
   }
 }
+
+
+@media (max-width: $MD) {
+  .aside{
+    .avatar{
+      padding-left: 0px;
+      padding-top: 0px;
+    }
+    .content{
+      padding: $gutter;
+    }
+  }
+}

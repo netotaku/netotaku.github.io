@@ -134,7 +134,7 @@ strong {
 /* line 1, ../scss/_hero.scss */
 .hero {
   height: 450px;
-  background: #eee;
+  background: #eee url(/assets/images/The-Agency-Logo.png) no-repeat right;
   position: relative;
   margin-bottom: 40px;
 }
@@ -206,11 +206,22 @@ strong {
   padding-top: 40px;
 }
 
+@media (max-width: 550px) {
+  /* line 17, ../scss/_aside.scss */
+  .aside .avatar {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  /* line 21, ../scss/_aside.scss */
+  .aside .content {
+    padding: 20px;
+  }
+}
 /* line 1, ../scss/_footer.scss */
 .footer {
   padding: 40px 0px;
   padding-bottom: 0px;
-  background: #222;
+  background: #222 url(/assets/images/The-Agency-Logo.png) no-repeat right;
   color: #ccc;
 }
 /* line 6, ../scss/_footer.scss */
