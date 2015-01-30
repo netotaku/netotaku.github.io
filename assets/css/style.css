@@ -63,12 +63,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 2, ../scss/_globals.scss */
+/* line 1, ../scss/_globals.scss */
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 4, ../scss/_globals.scss */
+/* line 5, ../scss/_globals.scss */
 html {
   background: #333;
   color: #333;
@@ -87,39 +89,47 @@ html {
   font-smoothing: antialiased;
 }
 
-/* line 26, ../scss/_globals.scss */
+/* line 27, ../scss/_globals.scss */
 a {
   color: #c00;
 }
-/* line 28, ../scss/_globals.scss */
+/* line 29, ../scss/_globals.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 34, ../scss/_globals.scss */
+/* line 35, ../scss/_globals.scss */
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 39, ../scss/_globals.scss */
+/* line 40, ../scss/_globals.scss */
 em {
   font-style: italic;
 }
 
-/* line 43, ../scss/_globals.scss */
+/* line 44, ../scss/_globals.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 51, ../scss/_globals.scss */
+/* line 48, ../scss/_globals.scss */
+hr {
+  margin: 0px;
+  margin-bottom: 20px;
+  border-width: 0px;
+  border-top: solid 1px #ddd;
+}
+
+/* line 55, ../scss/_globals.scss */
 .ratio {
   padding-top: 61.4%;
   height: 0;
   position: relative;
   margin-bottom: 20px;
 }
-/* line 56, ../scss/_globals.scss */
+/* line 60, ../scss/_globals.scss */
 .ratio iframe {
   position: absolute;
   top: 0px;
@@ -251,6 +261,11 @@ strong {
 /* line 12, ../scss/_footer.scss */
 .footer h2 {
   padding-bottom: 0px;
+}
+/* line 16, ../scss/_footer.scss */
+.footer .footer-logo img {
+  width: auto;
+  max-width: 100%;
 }
 
 /* line 1, ../scss/_latest-tweet.scss */

@@ -1,5 +1,6 @@
-
-*{ box-sizing: border-box; }
+*{
+  @include box-sizing(border-box);
+}
 
 html{
 
@@ -45,7 +46,10 @@ strong{
 }
 
 hr{
-
+  margin: 0px;
+  margin-bottom: 20px;
+  border-width: 0px;
+  border-top: solid 1px #ddd;
 }
 
 .ratio{
