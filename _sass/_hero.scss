@@ -13,6 +13,11 @@
     font-size: 3.6em;
     letter-spacing: -3px;
   }
-  .social{
+  &.compact{
+    height: auto;
+    .caption{
+      position: static;
+      padding: $doubleGutter 0px;
+    }
   }
 }
