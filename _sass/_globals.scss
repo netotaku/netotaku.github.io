@@ -63,3 +63,12 @@ hr{
     height: 100%;
   }
 }
+
+.ellipsis{
+  li{
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
