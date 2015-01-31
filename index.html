@@ -2,22 +2,48 @@
 layout: default
 ---
 
-<div class="home">
+  <section class="latest-tweet container">
+    <div class="sixteen columns">
+      <div id="tweet"></div>
+    </div>
+  </section>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <section class="container aside">
+    <aside class="four columns">
+      <figure class="avatar">
+        <img src="http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/914725_333162533500844_2093747751_n.jpg">
+      </figure>
+    </aside>
+    <article class="eight columns">
+      <div class="type content">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <h2>Profile</h2>
+        <p>Nick is a <a href="http://theagencyonline.co.uk">Technical Director</a> and award winning interface developer with a
+          creative vision and a broad portfolio of skills and experience. He has an academic approach to
+          technical project management and is a passionate exponent of open source.</p>
 
-</div>
+        <p>Nick has a passion for digital and is active in the Bristol and Bath technical
+          community speaking on various topics including first principles of web development,
+          SMM, SEO and Conversion.</p>
+
+        <p>He lives in Bristol with his wife <a href="http://alisons.kitchen">Food Stylist Alison Clarkson</a> and his
+          two sons <a href="http://superdan.io">Daniel</a> and Alex.</p>
+
+        <hr>
+
+        <ul>
+          {% for post in site.posts %}
+          <li class="post type">
+            <h2>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <p class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </article>
+  </section>

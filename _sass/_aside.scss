@@ -1,0 +1,28 @@
+.aside{
+  background: #fff;
+  .content{
+    padding-right: $doubleGutter;
+    padding-top: $doubleGutter;
+    padding-bottom: $gutter;
+  }
+  &.full{
+    padding-left: $doubleGutter;
+  }
+  .avatar{
+    padding-left: $doubleGutter;
+    padding-top: $doubleGutter;
+  }
+}
+
+
+@media (max-width: $MD) {
+  .aside{
+    .avatar{
+      padding-left: 0px;
+      padding-top: 0px;
+    }
+    .content{
+      padding: $gutter;
+    }
+  }
+}

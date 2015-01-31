@@ -1,27 +1,36 @@
-<header class="site-header">
+<!--
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-  <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    {% for page in site.pages %}
+      {% if page.title %}
+        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      {% endif %}
+    {% endfor %} -->
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
 
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
+    <header>
+      <figure class="hero" data-stellar-background-ratio="0.5">
+        <figcaption class="caption">
+          <div class="container">
+            <div class="twelve columns">
+              <div class="type">
+                <h1>Nick Clarkson</h2>
+                  <h2>Technical Director / Creative Technologist</h2>
+                </div>
 
-  </div>
+                <ul class="social">
+                  <li><a class="twitter" href="http://twitter.com/t_pk"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="instagram" href="http://instagram.com/t_pk"><i class="fa fa-instagram"></i></a></li>
+                  <li><a class="google-plus" rel="publisher" href="https://plus.google.com/u/1/102006751340511047247/posts"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a class="github" href="http://github.com/netotaku"><i class="fa fa-github-alt"></i></a></li>
+                  <li><a class="soundcloud" href="http://soundcloud.com/trialanderror"><i class="fa fa-soundcloud"></i></a></li>
+                  <li><a class="linkedin" href="http://uk.linkedin.com/in/nicholasclarkson/"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i></a></li>
+                </ul>
 
-</header>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </header>

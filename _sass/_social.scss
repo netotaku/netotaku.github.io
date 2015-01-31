@@ -1,0 +1,36 @@
+.social{
+  li{
+    float: left; // Argument for DRY here, could have abstracted to nav list
+    margin-right: 4px;
+    *{
+      line-height: 42px;
+    }
+    a{
+      width: 42px;
+      display: block;
+      background: #333;
+      color: #fff;
+      font-size: 1.2em;
+      text-align: center;
+      border-radius: 50%;
+      &.twitter{
+        background: #4099FF;
+      }
+      &.instagram{
+        background: #663300;
+      }
+      &.github{
+        background: #666;
+      }
+      &.soundcloud{
+        background: #f80;
+      }
+      &.linkedin{
+        background: #007bb6;
+      }
+      &.google-plus{
+        background: #dd4b39;
+      }
+    }
+  }
+}

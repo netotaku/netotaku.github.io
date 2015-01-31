@@ -1,0 +1,18 @@
+.hero{
+  height: 450px;
+  background: #eee url(/images/The-Agency-Logo.png) no-repeat right;
+  position: relative;
+  margin-bottom: $doubleGutter;
+  .caption{
+    width: 100%;
+    position: absolute;
+    bottom: $doubleGutter;
+    left: 0px;
+  }
+  h1{
+    font-size: 3.6em;
+    letter-spacing: -3px;
+  }
+  .social{
+  }
+}
