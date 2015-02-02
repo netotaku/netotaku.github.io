@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Women Who Code Talk, Frontend house style"
+title:  "Women Who Code, Frontend house style"
 date:   2015-01-27 23:30:32
 categories: Speaking SASS Compass
 ---
