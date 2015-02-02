@@ -1,0 +1,67 @@
+.burger{
+  display: none;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  color: #fff;
+  font-size: 2em;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,.5);
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  .fa{
+    line-height: 50px;
+  }
+}
+
+.ocn{
+  background: #111;
+  display: none;
+  position: fixed;
+  width: 260px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  nav{
+    ul{
+      li{
+        a{
+          font-size: 1.2em;
+          display: block;
+          padding: 8px 18px;
+          margin-bottom: 2px;
+          color: #fff;
+          background: #333;
+          text-decoration: none;
+          &.selected,
+          &:hover{
+            background: #444;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.open{
+  .wrapper{
+    margin-left: -260px;
+  }
+  .ocn{
+    display:block
+  }
+}
+
+@media (max-width: $MD) {
+  .burger{
+    display: block;
+  }
+}

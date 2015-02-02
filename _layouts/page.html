@@ -2,17 +2,37 @@
 layout: default
 ---
 
-<section class="container aside">
-  <aside class="four columns">
-  </aside>
-  <article class="eight columns">
+<header>
+  <figure class="hero compact">
+    {% include header.html %}
+  </figure>
+</header>
+
+<section class="main-tabs">
+  <div class="container">
+    <div class="twelve columns">
+      {% include mainmenu.html %}
+    </div>
+  </div>
+</section>
+
+<section class="container aside full">
+  <article class="twelve columns">
     <div class="type content">
 
       <header>
+
+        <nav class="breadcrumb">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>{{ page.title }}</li>
+          </ul>
+        </nav>
+
         <h1>{{ page.title }}</h1>
       </header>
 
-      <article>{{ content }}</article>
+      {{ content }}
 
     </div>
   </article>

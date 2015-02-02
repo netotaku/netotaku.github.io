@@ -22,6 +22,12 @@ html{
 
 }
 
+@media (max-width: $MD) {
+  html{
+    font-size: .8em;
+  }
+}
+
 a{
   color: $highlight;
   &:hover{

@@ -5,11 +5,63 @@
 
   <body>
 
-    
+    <div class="ocn">
+      {% include mainmenu.html %}
+    </div>
 
-    {{ content }}
+    <div class="wrapper open">
+      {{ content }}
+      {% include footer.html %}
+    </div>
 
-    {% include footer.html %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/vendor/stellar/jquery.stellar.min.js"></script>
+    <script src="/vendor/twitter/post-fetcher.js"></script>
+    <script>
+      (function($){
+        "use strict";
+
+        $('.burger').on('click', function(){
+          $('body').toggleClass('open');
+        })
+
+        var $window = $(window),
+            md = function(){
+              return $window.width() > 768;
+            }
+
+        if($('#tweet').length > 0){
+          twitterFetcher.fetch({
+            "id": '320201997074710529',
+            "domId": 'tweet',
+            "maxTweets": 1,
+            "enableLinks": true
+          });
+        }
+
+        $window.on('resize load', function(){
+          if(!partialSupport){
+            if(md()){
+              $.stellar({
+                horizontalScrolling: false
+              });
+            } else {
+              $.stellar('destroy');
+            }
+          }
+        });
+
+      })(jQuery);
+
+      /////
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59040010-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
   </body>
 

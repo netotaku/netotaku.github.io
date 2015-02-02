@@ -1,5 +1,4 @@
 .latest-tweet{
-  margin-bottom: $doubleGutter;
   color: #fff;
   a{
     color: #fff;
@@ -27,5 +26,12 @@
       background: #444;
       border-radius: 4px;
     }
+  }
+}
+
+
+@media (max-width: $MD) {
+  .latest-tweet{
+    display: none;
   }
 }

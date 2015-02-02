@@ -5,18 +5,6 @@ date:   2015-01-27 23:30:32
 categories: Speaking SASS Compass
 ---
 
+Thanks to <a href="http://twitter.com/wwcbristol">@wwcbristol</a> for letting me present <a href="/speaking">SASS House Style</a> at the first meeting of 2015. <a href="https://storify.com/t_pk/javascript-and-sass-house-style">See how it went on storify.</a>
 
-Thanks to <a href="http://twitter.com/wwcbristol">@wwcbristol</a> for letting me present at the first meeting of 2015
-
-<div class="ratio">
-<iframe src="https://docs.google.com/presentation/d/1plZvDw7iItwUopDqBc3jtQUVA39Iev4vND_L0b-qaZs/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
-
-<ul class="ellipsis">
-<li><a href="https://github.com/yui/yui3/wiki/Graded-Browser-Support">https://github.com/yui/yui3/wiki/Graded-Browser-Support</a></li>
-<li><a href="http://purecss.io/">http://purecss.io/</a></li>
-<li><a href="http://getskeleton.com/">http://getskeleton.com/</a></li>
-<li><a href="https://bem.info/">https://bem.info/</a></li>
-<li><a href="http://bradfrost.com/blog/post/atomic-web-design/">http://bradfrost.com/blog/post/atomic-web-design/</a></li>
-<li><a href="https://github.com/netotaku/netotaku.github.io">https://github.com/netotaku/netotaku.github.io</a></li>
-</ul>
+<div class="storify"><iframe src="//storify.com/t_pk/javascript-and-sass-house-style/embed?header=false" width="100%" height="750" frameborder="no" allowtransparency="true"></iframe><script src="//storify.com/t_pk/javascript-and-sass-house-style.js?header=false"></script><noscript>[<a href="//storify.com/t_pk/javascript-and-sass-house-style" target="_blank">View the story "Javascript and SASS House Style" on Storify</a>]</noscript></div>

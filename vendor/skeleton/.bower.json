@@ -24,8 +24,7 @@
     "tag": "2.0.4",
     "commit": "88f03612b05f093e3f235ced77cf89d3a8fcf846"
   },
-  "_source": "git://github.com/dhgamache/Skeleton.git",
+  "_source": "https://github.com/dhg/Skeleton.git",
   "_target": "~2.0.4",
-  "_originalSource": "skeleton",
-  "_direct": true
+  "_originalSource": "https://github.com/dhg/Skeleton.git"
 }

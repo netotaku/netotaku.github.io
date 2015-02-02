@@ -7,10 +7,22 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/vendor/skeleton/css/skeleton.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Archivo+Black">
-
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <script>var partialSupport = false;</script>
+
+  <!--[if IE 7]>
+
+  <![endif]-->
+  <!--[if (lte IE 8)]>
+  <link href="/application/themes/ms/assets/css/ie.css" rel="stylesheet" type="text/css" >
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script>partialSupport = true;</script>
+  <![endif]-->
+
 </head>

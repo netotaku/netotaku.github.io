@@ -32,3 +32,29 @@
     }
   }
 }
+
+
+@media (max-width: $MD) {
+  .hero{
+    height: auto;
+    .caption{
+      position: static;
+      padding: $gutter 0px;
+      padding-bottom: 16px;
+    }
+    h1{
+      .fa{
+        display: none;
+      }
+    }
+    .split{
+      clear: left;
+    }
+  }
+}
+
+@media (max-width: $SM) {
+  .hero{
+    margin-bottom: 0px;
+  }
+}

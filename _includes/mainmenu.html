@@ -1,0 +1,33 @@
+
+  <nav>
+    <ul>
+      <li>
+        <script>
+          if(window.location.pathname == "/"){
+            document.write('<a class="selected" href="/">Home</a>');
+          } else {
+            document.write('<a href="/">Home</a>');
+          }
+        </script>
+        <noscript>
+          <a class="selected" href="/">Home</a>
+        </noscript>
+      </li>
+      {% for page in site.pages %}
+        {% if page.title %}
+          <li>
+            <script>
+              if(window.location.pathname == "{{ page.url }}"){
+                document.write('<a class="selected" href="{{ url }}">{{ page.title }}</a>');
+              } else {
+                document.write('<a href="{{ page.url }}">{{ page.title }}</a>');
+              }
+            </script>
+            <noscript>
+              <a class="selected" href="{{ url }}">{{ page.title }}</a>
+            </noscript>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>

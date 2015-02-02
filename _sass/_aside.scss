@@ -21,8 +21,27 @@
       padding-left: 0px;
       padding-top: 0px;
     }
+    &.full{
+      padding-left: 0px;
+    }
     .content{
       padding: $gutter;
+    }
+  }
+}
+
+@media (max-width: $SM) {
+  .aside{
+    .avatar{
+      padding-left: 0px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+    &.full{
+      padding-left: 20px;
+    }
+    .content{
+      padding: 0px;
     }
   }
 }

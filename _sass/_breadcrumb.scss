@@ -10,3 +10,9 @@
     }
   }
 }
+
+@media (max-width: $SM) {
+  .breadcrumb{
+    padding-top: 20px;
+  }
+}

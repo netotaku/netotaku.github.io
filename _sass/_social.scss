@@ -2,6 +2,7 @@
   li{
     float: left; // Argument for DRY here, could have abstracted to nav list
     margin-right: 4px;
+    margin-bottom: 4px;
     *{
       line-height: 42px;
     }
