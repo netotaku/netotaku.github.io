@@ -65,7 +65,8 @@
 
 
 @media (max-width: $MD) {
-  .hero{
+  .home-hero{
+    padding-top: 60px;
     height: auto;
     .caption{
       position: static;
