@@ -1,21 +1,115 @@
-.footer{
-  padding: $doubleGutter 0px;
+
+.footer-links{
   padding-bottom: 0px;
-  background: #222 url(/images/The-Agency-Logo.png) no-repeat right;
-  color: #ccc;
-  a{
+  background: #222;
+  // background: #222 url(/images/The-Agency-Logo.png) no-repeat right;
+  .type{
+    *{
+      color: #ccc;
+    }
+  }
+  *{
     color: #ccc;
   }
   .type{
-    padding-bottom: $doubleGutter;
+    padding-bottom: $gutter;
   }
   h2{
     padding-bottom: 0px;
   }
-  .footer-logo{
-    img{
-      width: auto;
-      max-width: 100%;
+  .notice{
+    padding-bottom: $gutter;
+  }
+}
+
+
+
+.footer-tweet{
+  // color: #fff;
+  background : #ccc;
+  a{
+    color: #777;
+  }
+  .user{
+    display: none;
+  }
+  .tweet{
+    font-size: 2em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    font-style: italic;
+    font-family: georgia;
+  }
+  .interact{
+    margin-top: 4px;
+    .fa{
+      font-size: 0.8em;
+      text-align: center;
+      display: block;
+      float: left;
+      text-decoration: none;
+      margin-right: 6px;
+      line-height: 24px;
+      width: 28px;
+      background: #444;
+      border-radius: 4px;
+      color: #fff;
+    }
+  }
+}
+
+.footer-social{
+  .likesharefollow{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.footer-share{
+  background: #c00;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .footer-social{
+    .likesharefollow{
+      display: none;
+    }
+  }
+  .footer-share{
+    display: block;
+  }
+}
+
+.footer-base{
+  color: #fff;
+  background: #111;
+  .base-right{
+    float: right;
+    span.pipe{
+      color: #666;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+      span{
+        text-decoration: underline;
+      }
+      &:hover{
+        span{
+          text-decoration: none;
+        }
+      }
+    }
+    // text-align: right;
+  }
+}
+
+@media (max-width: 604px) {
+  .footer-base{
+    .base-right{
+      float: none;
     }
   }
 }

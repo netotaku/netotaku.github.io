@@ -1,12 +1,22 @@
 .time{
   color: #666;
   margin-bottom: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 20px!important;
 }
 
-h2 + .time{
+h2 + p.time{
   margin-top: -14px;
 }
 
-h1 + .time{
-  margin-top: -24px;
+.type h1 + p.time{
+  margin-top: -30px;
+}
+
+.updates{
+  .post{
+    // .type p:last-child {
+    //   padding-bottom: 0px;
+    // }
+  }
 }

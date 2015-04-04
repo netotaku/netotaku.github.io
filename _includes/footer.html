@@ -1,4 +1,33 @@
-  <footer class="footer">
+
+
+<div class="footer">
+
+  <section class="section footer-tweet">
+    <div class="container">
+      <div class="sixteen columns">
+        <div id="tweet"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section footer-social">
+    <div class="container">
+      <div class="sixteen columns">
+        {% include social.html %}
+        {% include likesharefollow.html %}
+      </div>
+    </div>
+  </section>
+
+  <a class="section footer-share">
+    <div class="container">
+      <div class="twelve columns">
+        {% include likesharefollow.html %}
+      </div>
+    </div>
+  </a>
+
+  <footer class="section footer-links">
     <div class="container">
       <div class="three columns">
         <div class="type">
@@ -31,13 +60,32 @@
         </div>
       </div>
       <div class="three columns">
-        <div class="footer-logo">
-          <a href="http://theagencyonline.co.uk"><img src="http://theagencyonline.co.uk/wp-content/themes/agency-responsive-aug-2014-theme/images/logo.png"></a>
-        </div>
+        <p class="notice">Site built with <a href="">Jekyll</a> and hosted by <a href="">GitHub</a></p>
+        <!-- <div class="klout">
+          <iframe class="klout" src="http://widgets.klout.com/badge/t_pk" width="72" height="72" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
+        </div> -->
       </div>
     </div>
   </footer>
 
-  <div class="burger">
-    <i class="fa fa-bars"></i>
+  <section class="section footer-base">
+    <div class="container">
+      <div class="twelve columns">
+        <p class="base-right">Creativity, Process, Leadership <span class="pipe">|</span> <a href="#top"><i class="fa fa-chevron-up"></i></a></p>
+        <p>&copy; Copyright Nick Clarkson 2015</p>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+<div class="modal">
+  <div class="action close" data-toggle=".modal"><span>Close</span> <i class="fa fa-close"></i></div>
+  <div class="dialogue">
+    <div class="message">
+      <div class="addthis_sharing_toolbox"></div>
+      <p>Thank you</p>
+    </div>
   </div>
+</div>

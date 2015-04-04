@@ -1,0 +1,75 @@
+---
+layout: empty
+title: About
+permalink: /about/
+---
+
+
+<header>
+  <figure class="hero compact">
+    {% include header.html %}
+  </figure>
+</header>
+
+<div role="main">
+
+  <section class="container">
+    <div class="twelve columns">
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>{{ page.title }}</li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="container">
+    <article class="ten columns">
+      <div class="type">
+        <header>
+          <h1>{{ page.title }}</h1>
+        </header>
+
+        <p>Nick is a <a href="http://theagencyonline.co.uk">Technical Director</a> and award winning interface developer with a
+          creative vision and a broad portfolio of skills and experience. He has an academic approach to
+          technical project management and is a passionate exponent of open source.</p>
+
+        <p>Nick has a passion for digital and is active in the Bristol and Bath technical
+          community <a href="/speaking/">speaking on various topics</a> including principles of web development,
+          SMM, SEO, Digital Ideation and Conversion.</p>
+
+        <p>He lives in Bristol with his wife <a href="http://alisons.kitchen">Food Stylist Alison Clarkson</a> and his
+          two sons <a href="http://superdan.io">Daniel</a> and Alex.</p>
+
+      </div>
+    </article>
+  </section>
+
+
+
+      <section class="section updates">
+        <div class="container">
+          <article class="ten columns">
+            <div class="type">
+              <h2>Updates</h2>
+              <ul>
+                {% for post in site.posts %}
+                <li class="post type">
+                  <h2>
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+                  <p class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</p>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+
+</div>
+
+{% include footer.html %}

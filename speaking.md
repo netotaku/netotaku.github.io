@@ -4,6 +4,7 @@ title: Speaking
 permalink: /speaking/
 ---
 
+<section class="tab" id="de-risking-digital">
 <h2>De-Risking Digital</h2>
 
 <div class="ratio">
@@ -16,7 +17,9 @@ permalink: /speaking/
 <li><a href="http://en.wikipedia.org/wiki/Ideation_(idea_generation)">http://en.wikipedia.org/wiki/Ideation_(idea_generation)</a></li>
 </ul>
 
-<hr>
+</section>
+
+<section class="tab" id="frontend-house-style">
 
 <h2>Fontend House Style</h2>
 
@@ -32,3 +35,5 @@ permalink: /speaking/
 <li><a href="http://bradfrost.com/blog/post/atomic-web-design/">http://bradfrost.com/blog/post/atomic-web-design/</a></li>
 <li><a href="https://github.com/netotaku/netotaku.github.io">https://github.com/netotaku/netotaku.github.io</a></li>
 </ul>
+
+</section>

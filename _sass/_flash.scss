@@ -1,0 +1,33 @@
+.flash{
+  display: none;
+  position: relative;
+  z-index: 1;
+  padding: 6px 18px;
+  background: #c00;
+  *{
+    color: #fff;
+  }
+  .close{
+    cursor: pointer;
+  }
+  .message{
+    position: relative;
+    .close{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+  }
+}
+
+.show-dismissable{
+  .flash{
+    display: block;
+  }
+  .home-hero .action{
+    top: 40px;
+  }
+  .home-hero h1{
+    padding-top: 40px;
+  }
+}

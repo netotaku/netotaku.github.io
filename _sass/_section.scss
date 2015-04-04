@@ -1,0 +1,24 @@
+
+
+
+.section{
+
+  &.updates{
+    background: #f5f5f5;
+    padding: $doubleGutter 0px;
+    padding-bottom: 0px;
+  }
+
+  &.footer-share,
+  &.footer-base{
+    padding: 10px 0px;
+  }
+  &.footer-tweet,
+  &.footer-social,
+  &.footer-links{
+    padding: $doubleGutter 0px;
+  }
+  &.footer-links{
+    padding-bottom: 0px;
+  }
+}

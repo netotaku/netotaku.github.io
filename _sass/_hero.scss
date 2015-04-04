@@ -1,36 +1,65 @@
 .hero{
-  height: 450px;
-  background: #eee url(/images/The-Agency-Logo.png) no-repeat right;
+  .type{
+    *{
+      color: #fff;
+    }
+  }
+
   position: relative;
-  margin-bottom: $doubleGutter;
+  background: url(/images/test2.jpg) no-repeat bottom;
+  background-size: cover;
   .caption{
     width: 100%;
     position: absolute;
     bottom: $doubleGutter;
     left: 0px;
   }
+  h2{
+    font-size: 1.2em;
+    padding-bottom: 30px;
+  }
   h1{
-    font-size: 3.6em;
-    letter-spacing: -3px;
-    padding-bottom: 10px;
+    font-size: 2.8em;
+    font-family: 'Raleway Dots', sans-serif;
+    padding-bottom: 4px;
     a{
-      color: #333;
+      color: #fff;
       text-decoration: none;
       &:hover{
         color: $highlight;
       }
       .fa{
         font-size: 0.5em;
-        color: #666;
+        color: rgba(255,255,255,.4);
+        // color: #666;
       }
     }
   }
   &.compact{
-    height: auto;
+    background: url(/images/test2.jpg) no-repeat center;
+    // background: url(/images/shim.jpg) no-repeat bottom;
+    background-size: cover;
     .caption{
       position: static;
-      padding: $doubleGutter 0px;
+      padding: 70px 0px;
     }
+    .social{
+      display: none;
+    }
+    // .type p:last-child{
+    //   padding-bottom: 0px;
+    // }
+    h2{
+      padding-bottom: 0px;
+    }
+  }
+  &.home-hero{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -44,14 +73,20 @@
       padding-bottom: 16px;
     }
     h1{
+      font-size: 2.6em;
       .fa{
         display: none;
       }
+    }
+    h2{
+      font-size: 1.6em;
     }
     .split{
       clear: left;
     }
   }
+
+
 }
 
 @media (max-width: $SM) {

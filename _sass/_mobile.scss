@@ -1,23 +1,7 @@
-.burger{
-  display: none;
-  position: fixed;
-  bottom: 12px;
-  right: 12px;
-  color: #fff;
-  font-size: 2em;
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
-  background: rgba(0,0,0,.5);
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-  .fa{
-    line-height: 50px;
-  }
-}
+
 
 .ocn{
+  color: #fff;
   background: #111;
   display: none;
   position: fixed;
@@ -51,7 +35,7 @@
   width: 100%;
 }
 
-.open{
+.opened{
   .wrapper{
     margin-left: -260px;
   }
@@ -61,7 +45,7 @@
 }
 
 @media (max-width: $MD) {
-  .burger{
-    display: block;
-  }
+  // .burger{
+  //   display: block;
+  // }
 }

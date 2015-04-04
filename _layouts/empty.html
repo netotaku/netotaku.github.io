@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
     <a name="top"></a>
     <div class="ocn">
       {% include mainmenu.html %}
     </div>
-
     <div class="wrapper opened">
+      {% include flash.html %}
       {{ content }}
-      {% include footer.html %}
-      {% include open.html %}
     </div>
-
     {% include js.html %}
-
   </body>
-
 </html>
-<!-- default -->

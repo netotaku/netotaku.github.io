@@ -1,0 +1,45 @@
+
+$H: 74px;
+
+.action{
+  color: #fff;
+  cursor: pointer;
+  padding: 0px 18px;
+  height: $H;
+  line-height: $H;
+  text-align: right;
+  font-size: 1.3em;
+  .fa{
+    line-height: 74px;
+  }
+  &:hover{
+    span{
+      color: #ccc;
+      //display: inline-block;
+      //border-bottom: solid 1px #fff;
+    }
+  }
+  &.burger{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  &.likesharefollow{
+    text-align: left;
+    line-height: 47px;
+    height: 47px;
+    padding: 0px;
+    *{
+      line-height: 47px;
+      height: 47px;
+    }
+  }
+}
+
+@media (max-width: $MD) {
+  .burger{
+    span{
+      display: none;
+    }
+  }
+}

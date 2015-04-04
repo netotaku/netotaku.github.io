@@ -8,32 +8,24 @@ layout: default
   </figure>
 </header>
 
-<section class="main-tabs">
-  <div class="container">
-    <div class="twelve columns">
-      {% include mainmenu.html %}
-    </div>
-  </div>
-</section>
+<div role="main">
+  <section class="container">
+    <article class="ten columns">
+      <div class="type">
 
-<section class="container aside full">
-  <article class="twelve columns">
-    <div class="type content">
+        <header>
+          <nav class="breadcrumb">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li>{{ page.title }}</li>
+            </ul>
+          </nav>
+          <h1>{{ page.title }}</h1>
+        </header>
 
-      <header>
+        {{ content }}
 
-        <nav class="breadcrumb">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li>{{ page.title }}</li>
-          </ul>
-        </nav>
-
-        <h1>{{ page.title }}</h1>
-      </header>
-
-      {{ content }}
-
-    </div>
-  </article>
-</section>
+      </div>
+    </article>
+  </section>
+</div>

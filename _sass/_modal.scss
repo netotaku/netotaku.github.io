@@ -1,0 +1,39 @@
+$modalH: 140px;
+.modal{
+  &.opened{
+    display: block;
+  }
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  .dialogue{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -$modalH/2;
+    text-align: center;
+    .message{
+      border-radius: 8px;
+      margin: auto;
+      max-width: 300px;
+      height: $modalH;
+      //background: rgba(0,0,0,.6);
+      padding: 20px;
+      color: #fff;
+      .addthis_sharing_toolbox{
+        margin: 20px;
+      }
+      .close{
+
+      }
+      .share{
+
+      }
+    }
+  }
+}

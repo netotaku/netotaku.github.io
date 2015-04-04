@@ -1,63 +1,8 @@
 ---
-layout: default
+layout: empty
+isHome: true
 ---
 
-  <header>
-    <figure class="hero" data-stellar-background-ratio="0.5">
-      {% include header.html %}
-    </figure>
-  </header>
-
-  <section class="latest-tweet container">
-    <div class="sixteen columns">
-      <div id="tweet"></div>
-    </div>
-  </section>
-
-  <section class="main-tabs">
-    <div class="container">
-      <div class="twelve columns">
-        {% include mainmenu.html %}
-      </div>
-    </div>
-  </section>
-
-  <section class="container aside">
-    <aside class="four columns">
-      <figure class="avatar">
-        <img src="http://photos-e.ak.instagram.com/hphotos-ak-xfa1/t51.2885-15/914725_333162533500844_2093747751_n.jpg">
-        <iframe class="klout" src="http://widgets.klout.com/badge/t_pk" width="72" height="72" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
-      </figure>
-    </aside>
-    <article class="eight columns">
-      <div class="type content">
-
-        <h2>Profile</h2>
-
-        <p>Nick is a <a href="http://theagencyonline.co.uk">Technical Director</a> and award winning interface developer with a
-          creative vision and a broad portfolio of skills and experience. He has an academic approach to
-          technical project management and is a passionate exponent of open source.</p>
-
-        <p>Nick has a passion for digital and is active in the Bristol and Bath technical
-          community <a href="/speaking/">speaking on various topics</a> including principles of web development,
-          SMM, SEO, Digital Ideation and Conversion.</p>
-
-        <p>He lives in Bristol with his wife <a href="http://alisons.kitchen">Food Stylist Alison Clarkson</a> and his
-          two sons <a href="http://superdan.io">Daniel</a> and Alex.</p>
-
-        <hr>
-
-        <ul>
-          {% for post in site.posts %}
-          <li class="post type">
-            <h2>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <p class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</p>
-          </li>
-          {% endfor %}
-        </ul>
-
-      </div>
-    </article>
-  </section>
+  <figure class="hero home-hero">
+    {% include header.html %}
+  </figure>

@@ -9,25 +9,26 @@ layout: default
   </figure>
 </header>
 
+<div role="main">
+  <section class="container aside full">
+    <article class="twelve columns">
+      <div class="type content post">
 
-<section class="container aside full">
-  <article class="twelve columns">
-    <div class="type content post">
+        <header>
+          <nav class="breadcrumb">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li>{{ page.title }}</li>
+            </ul>
+          </nav>
 
-      <header>
-        <nav class="breadcrumb">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li>{{ page.title }}</li>
-          </ul>
-        </nav>
+          <h1>{{ page.title }}</h1>
+          <p class="time"><i class="fa fa-clock-o "></i> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        </header>
 
-        <h1>{{ page.title }}</h1>
-        <p class="time"><i class="fa fa-clock-o "></i> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-      </header>
+        <article>{{ content }}</article>
 
-      <article>{{ content }}</article>
-
-    </div>
-  </article>
-</section>
+      </div>
+    </article>
+  </section>
+</div>

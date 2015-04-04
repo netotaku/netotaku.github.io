@@ -7,6 +7,7 @@ html{
 
   line-height: 1.75;
   font-size: 1em;
+  // font-family: 'Open Sans', sans-serif;
   font-family: sans-serif;
 
   -webkit-text-rendering: optimizeLegibility;
@@ -20,11 +21,13 @@ html{
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased;
 
+//   font-family: 'Titillium Web', sans-serif;
+
 }
 
 @media (max-width: $MD) {
   html{
-    font-size: .8em;
+    // font-size: .8em;
   }
 }
 
@@ -78,3 +81,16 @@ hr{
     text-overflow: ellipsis;
   }
 }
+
+html,body,.wrapper{
+  height: 100%;
+}
+
+[role=main]{
+  padding-top: $gutter;
+  background: #fff;
+}
+
+// .dismissable{
+//   display: none;
+// }

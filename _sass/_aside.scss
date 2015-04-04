@@ -1,53 +1,53 @@
-.aside{
-  background: #fff;
-  .content{
-    padding-right: $doubleGutter;
-    padding-top: $doubleGutter;
-    padding-bottom: $gutter;
-  }
-  &.full{
-    padding-left: $doubleGutter;
-  }
-  .avatar{
-    margin-left: $doubleGutter;
-    margin-top: $doubleGutter;
-    position: relative;
-    .klout{
-      position: absolute;
-      top: 12px;
-      right: 10px;
-    }
-  }
-}
+// .aside{
+//   background: #fff;
+//   .content{
+//     padding-right: $doubleGutter;
+//     padding-top: $doubleGutter;
+//     padding-bottom: $gutter;
+//   }
+//   &.full{
+//     padding-left: $doubleGutter;
+//   }
+//   .avatar{
+//     margin-left: $doubleGutter;
+//     margin-top: $doubleGutter;
+//     position: relative;
+//     .klout{
+//       position: absolute;
+//       top: 12px;
+//       right: 10px;
+//     }
+//   }
+// }
 
 
 @media (max-width: $MD) {
-  .aside{
-    .avatar{
-      margin-left: 0px;
-      margin-top: 0px;
-    }
-    &.full{
-      padding-left: 0px;
-    }
-    .content{
-      padding: $gutter;
-    }
-  }
+  // .aside{
+  //   .avatar{
+  //     margin-left: 0px;
+  //     margin-top: 0px;
+  //   }
+  //   &.full{
+  //     padding-left: 0px;
+  //   }
+  //   .content{
+  //     padding: $gutter;
+  //   }
+  // }
 }
 
 @media (max-width: $SM) {
-  .aside{
-    .avatar{
-      margin-left: 0px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    &.full{
-      padding-left: 20px;
-    }
-    .content{
-      padding: 0px;
-    }
-  }
+  // .aside{
+  //   .avatar{
+  //     margin-left: 0px;
+  //     margin-top: 20px;
+  //     margin-bottom: 20px;
+  //   }
+  //   &.full{
+  //     padding-left: 20px;
+  //   }
+  //   .content{
+  //     padding: 0px;
+  //   }
+  // }
 }
