@@ -9,30 +9,27 @@
   </nav>
 </script>
 
-<script type="text/javascript">
-
-  var disqus_shortname = 'nickclarkson';
-
-  (function () {
-    var s = document.createElement('script'); s.async = true;
-    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-
-</script>
-
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dbf29307cc266c2" async="async"></script>
 <script src="/vendor/underscore/underscore-min.js"></script>
 <script src="/vendor/jquery/dist/jquery.min.js"></script>
 <script src="/vendor/twitter/post-fetcher.js"></script>
 <script src="/vendor/jquery.cookie/jquery.cookie.js"></script>
-<script>
+
+<script type="text/javascript">
+
+  var disqus_shortname = 'nickclarkson';
+
+  var s = document.createElement('script'); s.async = true;
+  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+
+
+  if($('#disqus_thread').length > 0){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }
+
   (function($){
     "use strict";
 
