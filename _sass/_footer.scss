@@ -2,6 +2,10 @@
 .footer-links{
   padding-bottom: 0px;
   background: #222;
+  .col{
+    float: left;
+    width: 25%;
+  }
   // background: #222 url(/images/The-Agency-Logo.png) no-repeat right;
   .type{
     *{
@@ -19,6 +23,19 @@
   }
   .notice{
     padding-bottom: $gutter;
+  }
+}
+
+
+@media (max-width: $MD) {
+  .footer-links{
+    .col{
+      float: left;
+      width: 33.333%;
+      &.clr{
+        width: auto;
+      }
+    }
   }
 }
 

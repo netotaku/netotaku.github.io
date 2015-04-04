@@ -48,50 +48,5 @@ permalink: /about/
 
 </div>
 
-      <section class="section updates">
-        <div class="container">
-          <div class="eight columns">
-            <div class="type">
-              <h2>Updates</h2>
-              <ul>
-                {% for post in site.posts %}
-                <li class="post type">
-                  <h2>
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </h2>
-                  <p class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</p>
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-          <div class="four columns">
-
-            <form action="//github.us10.list-manage.com/subscribe/post?u=51d15ef8a64a4de71b1dd432a&amp;id=7d299438a2" method="post" class="subscribe" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-
-            	<div class="type">
-                <h2><i class="fa fa-envelope"></i> Subscribe</h2>
-              </div>
-
-              <p>Subscribe by email below or with <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
-
-            	<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="youname@website.com">
-
-              <div class="hide">
-                <input type="text" name="b_51d15ef8a64a4de71b1dd432a_7d299438a2" tabindex="-1" value="">
-              </div>
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-
-            </form>
-
-          </div>
-        </div>
-      </section>
-
-
-
-
+{% include updates.html %}
 {% include footer.html %}

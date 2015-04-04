@@ -95,3 +95,14 @@
     margin-bottom: 0px;
   }
 }
+
+
+@media (max-width: $MD) {
+ .hero{
+    &.compact{
+      .caption{
+        padding-bottom: 208px;
+      }
+    }
+  }
+}

@@ -1,22 +1,43 @@
-.time{
-  color: #666;
-  margin-bottom: 20px;
-  margin-bottom: 0px;
-  padding-bottom: 20px!important;
+
+// .time{
+//   margin-bottom: 0px;
+//   padding-bottom: 0px;
+// }
+
+.post{
+  header{
+    margin-bottom: 40px;
+    h2, h1, p{
+      padding: 0px;
+    }
+    .time, h2{
+      padding-bottom: 4px;
+    }
+  }
 }
 
-h2 + p.time{
-  margin-top: -14px;
-}
+// h2 + p.time{
+//   margin-top: -14px;
+// }
+//
+// .type h1 + p.time{
+//   margin-top: -30px;
+// }
 
-.type h1 + p.time{
-  margin-top: -30px;
-}
+// .post{
+//   &.full{
+//     .time{
+//       margin-bottom: 20px;
+//     }
+//   }
+// }
 
 .updates{
   .post{
-    // .type p:last-child {
-    //   padding-bottom: 0px;
-    // }
+
   }
+}
+
+.comment-count{
+  color: #c00;
 }

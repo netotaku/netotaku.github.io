@@ -9,15 +9,21 @@
     padding-bottom: 0px;
   }
 
+
   &.footer-share,
   &.footer-base{
     padding: 10px 0px;
   }
+
+  &.disqus,
   &.footer-tweet,
   &.footer-social,
   &.footer-links{
     padding: $doubleGutter 0px;
   }
+
+
+  &.disqus,
   &.footer-links{
     padding-bottom: 0px;
   }

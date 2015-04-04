@@ -10,25 +10,37 @@ layout: default
 </header>
 
 <div role="main">
-  <section class="container aside full">
+  <section class="container">
+    <div class="twelve columns">
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li>{{ page.title }}</li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="container">
     <article class="twelve columns">
-      <div class="type content post">
-
-        <header>
-          <nav class="breadcrumb">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li>{{ page.title }}</li>
-            </ul>
-          </nav>
-
-          <h1>{{ page.title }}</h1>
-          <p class="time"><i class="fa fa-clock-o "></i> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-        </header>
-
+      <div class="type post full">
+        <article class="post">
+          <header>
+            <div class="time"><i class="fa fa-clock-o"></i> {{ page.date | date: "%b %-d, %Y" }}</div>
+            <h1>{{ page.title }}</h1>
+            <div class="comment-count"><i class="fa fa-comment"></i> <a href="{{ page.url | prepend: site.baseurl }}#disqus_thread" class="count">0 comments</a></span></div>
+          </header>
+        </article>
         <article>{{ content }}</article>
-
       </div>
     </article>
   </section>
+  <section class="section disqus container">
+    <div class="twelve columns">
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
 </div>
+
+{% include updates.html %}
