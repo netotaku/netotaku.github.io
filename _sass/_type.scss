@@ -23,11 +23,11 @@
   p, ul, ol{
     padding-bottom: $gutter;
   }
-  p:last-child{
-    padding-bottom: $doubleGutter;
-  }
-  p:first-child{
-    font-size: 2em;
-    font-style: italic;
-  }
+  // p:last-child{
+  //   padding-bottom: $doubleGutter;
+  // }
+  // p:first-child{
+  //   font-size: 2em;
+  //   font-style: italic;
+  // }
 }
