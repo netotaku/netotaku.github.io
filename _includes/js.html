@@ -11,9 +11,9 @@
 
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dbf29307cc266c2" async="async"></script>
 <script src="/vendor/underscore/underscore-min.js"></script>
-<script src="/vendor/jquery/dist/jquery.min.js"></script>
 <script src="/vendor/twitter/post-fetcher.js"></script>
 <script src="/vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
 <script type="text/javascript">
 
@@ -58,8 +58,6 @@
           id = $this.attr('id'),
           $close = $this.find('.close').on('click', function(){
             $.cookie(id, true);
-            // console.log($.cookie(id));
-            // console.log(id);
             $('body').toggleClass('show-dismissable');
           });
       if(!$.cookie(id)){
