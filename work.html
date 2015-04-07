@@ -44,9 +44,9 @@ permalink: /work/
           <div class="ratio square">
             <canvas id="roles"></canvas>
           </div>
-          <figcaption>Roles</figcaption>
+          <figcaption class="mobile">Frameworks</figcaption>
         </figure>
-        <ul></ul>
+        <ul class="mobile" data-list="roles"></ul>
       </div>
     </div>
 
@@ -58,7 +58,7 @@ permalink: /work/
           </div>
           <figcaption>Frameworks</figcaption>
         </figure>
-        <ul></ul>
+        <ul data-list="frameworks"></ul>
       </div>
     </div>
 
@@ -77,7 +77,7 @@ permalink: /work/
           </div>
           <figcaption>Languages</figcaption>
         </figure>
-        <ul></ul>
+        <ul data-list="lang"></ul>
       </div>
     </div>
 
@@ -87,14 +87,32 @@ permalink: /work/
 
   </section>
 
-  <section class="container type">
-    <div class="type projects">
-      <h2>By project</h2>
-      <ul></ul>
+  <section class="section">
+    <div class="container">
+      <div class="six columns">
+        <div class="desktop">
+          <h2>Roles</h2>
+          <ul data-list="roles"></ul>
+        </div>
+      </div>
+      <div class="six columns">
+        <h2>Agencies</h2>
+        <ul class="agency"></ul>
+      </div>
     </div>
   </section>
 
 </div>
+
+  <section class="section projects">
+    <div class="type container">
+      <h2>By project</h2>
+      <ul></ul>
+      <p class="foot-note"><i class="fa fa-info-circle"></i> <small>Links in grey no longer include my work.</small></p>
+    </div>
+  </section>
+
+
 
 <script src="/js/chart-colors.js"></script>
 <script src="/js/chart-data.js"></script>

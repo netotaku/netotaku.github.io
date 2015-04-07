@@ -1,11 +1,19 @@
 var charts = {
 
+  agency: {
+    dv: { label: 'Digital Visitor' },
+    gv: { label: 'Goram+Vincent' },
+    e3: { label: 'e3' },
+    ta: { label: 'TheAgency' },
+    fr: { label: 'Independent' }
+  },
+
   roles: {
     fed: { label: 'Frontend Developer' },
     bed: { label: 'Backend Developer' },
     prod:{ label: 'Producer' },
     ted: { label: 'Technical Director' },
-    ind: { label: 'Independant' }
+    ind: { label: 'Independent' }
   },
 
   frameworks: {
@@ -50,133 +58,152 @@ var projects = [
     frameworks: ['c5'],
     lang: ['html','sass','js','php'],
     roles: ['fed','bed','ted'],
-    status: 1
+    status: 1,
+    agency: ['ta']
   },{
     label: 'BSM',
     url: 'http://bsm.co.uk',
     frameworks: ['modx'],
     lang: ['html','sass','js'],
     roles: ['fed'],
-    status: 1
+    status: 1,
+    agency: ['ta']
   },{
     label: 'Kia',
     url: 'http://kia.co.uk',
     frameworks: ['score'],
     lang: ['html','css','js'],
     roles: ['fed'],
-    status: 0
+    status: 0,
+    agency: ['e3']
   },{
     label: '50 Things',
     url: 'https://www.50things.org.uk',
     frameworks: ['umb'],
     lang: ['html','css','js'],
     roles: ['fed'],
-    status: 1
+    status: 1,
+    agency: ['e3']
   },{
     label: 'Alison\'s Kitchen',
     url: 'https://alisons.kitchen',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['fed','bed','ted','ind'],
-    status: 1
+    status: 1,
+    agency: ['fr']
   },{
     label: 'Gabrielle Blackman',
     url: 'http://gabrielleblackman.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['fed','bed','ted','ind'],
-    status: 1
+    status: 1,
+    agency: ['fr']
   },{
     label: 'GigHub',
     url: 'http://gighub.co.uk',
     frameworks: ['slim','lara','jQ'],
     lang: ['html','sass','js','php','blade'],
     roles: ['fed','bed','ted','ind'],
-    status: 1
+    status: 1,
+    agency: ['fr']
   },{
     label: 'King &amp; Allen',
     url: 'http://kingandallen.co.uk',
     frameworks: ['besp','yui'],
     lang: ['html','css','js','php'],
     roles: ['fed','bed','ind'],
-    status: 1
+    status: 1,
+    agency: ['fr']
   },{
     label: 'Scottish Dental',
     url: 'http://www.scottishdental.org',
     frameworks: ['besp','yui'],
     lang: ['html','css','js'],
     roles: ['fed','ind'],
-    status: 0
+    status: 0,
+    agency: ['fr']
   },{
     label: 'Rethink',
     url: 'http://www.rethink.org',
     frameworks: ['besp','flash'],
     lang: ['html','css','js'],
     roles: ['fed','ind'],
-    status: 0
+    status: 0,
+    agency: ['fr']
   },{
     label: 'Nathan Collis',
     url: 'http://www.nathancollis.com',
     frameworks: ['besp','yui'],
     lang: ['html','css','js'],
     roles: ['fed','ind'],
-    status: 0
+    status: 0,
+    agency: ['fr']
   },{
     label: 'CreditCall',
     url: 'http://www.creditcall.com',
     frameworks: ['wp','jQ'],
     lang: ['html','sass','js'],
     roles: ['fed','ted'],
-    status: 1
+    status: 1,
+    agency: ['ta']
   },{
     label: 'The Royal Navy',
     url: 'http://www.royalnavy.mod.uk',
     frameworks: ['score','jQ'],
     lang: ['html','css','js'],
     roles: ['fed'],
-    status: 0
+    status: 0,
+    agency: ['e3']
   },{
     label: 'Philip Mould',
     url: 'http://www.philipmould.com',
     frameworks: ['perch','jQ'],
     lang: ['html','css','js'],
     roles: ['fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'The Mill',
     url: 'http://www.themill.com',
     frameworks: ['wp','jQ'],
     lang: ['html','css','js'],
     roles: ['fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['e3']
   },{
     label: 'Stila',
     url: 'http://stila.co.uk',
     frameworks: ['shopify','jQ'],
     lang: ['html','css','js','liquid'],
     roles: ['fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Zettics',
     url: 'http://www.zettics.com',
     frameworks: ['wp','jQ'],
     lang: ['html','css','js'],
     roles: ['fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'The Makeup School of London',
     url: 'http://makeupschoollondon.co.uk',
     frameworks: ['cake','jQ'],
     lang: ['html','css','js'],
     roles: ['fed','bed'],
-    status: 0
+    status: 0,
+    agency: ['gv']
   },{
     label: 'Red Central',
     url: 'http://redcentral.co.uk',
     frameworks: ['tumblr'],
     lang: ['html'],
     roles: ['ted'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     //
     label: 'CKD Audit',
@@ -184,62 +211,71 @@ var projects = [
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Somnium',
     url: 'http://somniumtech.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Informatica',
     url: 'http://healthanalytics.bmj.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Space Engineering',
     url: 'http://www.space-engineering.co.uk',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Ontology',
     url: 'http://www.ontology.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 1
+    status: 1,
+    agency: ['gv']
   },{
     label: 'Ebis for Schools',
     url: 'http://www.ebisforschools.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 0
+    status: 0,
+    agency: ['gv']
   },{
     label: 'Velocent',
     url: 'http://www.velocent.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['ted','fed','bed'],
-    status: 0
+    status: 0,
+    agency: ['gv']
   },{
     label: 'Bournemouth University',
     url: 'https://home.bournemouth.ac.uk',
     frameworks: ['drup','jQ'],
     lang: ['html','sass','js','php'],
     roles: ['fed'],
-    status: 0
+    status: 0,
+    agency: ['dv']
   },{
     label: 'Visitor Review',
     url: 'https://home.bournemouth.ac.uk',
     frameworks: ['zend'],
     lang: ['html','css','js','php'],
     roles: ['fed','ted','bed'],
-    status: 0
+    status: 0,
+    agency: ['dv']
   }
 ];

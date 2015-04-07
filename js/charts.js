@@ -6,8 +6,6 @@ function color(segments, pallette){
     segments[i].color = '#'+pallette[i];
   }
 
-  console.log(segments);
-
   return segments;
 
 }
@@ -56,16 +54,51 @@ function chart(chart, pallette){
 
 }
 
-function make(el,type,pallette){
+function segments(el, data){
 
-  var data = chart(el,pallette), $list = $('.'+el+' ul');
-
-  new Chart(document.getElementById(el).getContext("2d"))[type](data);
+  var $list = $('[data-list="'+el+'"]'), limit = 5;
 
   for(segment in data.sort(function(a,b){
     return a.value < b.value ? 1 : -1;
   })){
     $('<li>').appendTo($list).text(data[segment].label + ' ( '+ data[segment].value +' )');
+  }
+
+  $list.find('li:gt(5)').hide();
+
+  var segmentcount = $list.find('li').length;
+
+  if(segmentcount > limit){
+    $('<li/>').appendTo($list).html('<li><a href="#">'+ (segmentcount-limit) +' more</a></li>').on('click', function(e){
+      e.preventDefault();
+      $list.find('li').show();
+      $(this).hide();
+    });
+  }
+
+
+}
+
+function make(el,type,pallette){
+
+  var data = chart(el,pallette);
+
+  new Chart(document.getElementById(el).getContext("2d"))[type](data);
+
+  segments(el, data);
+
+}
+
+function bars(c, pallette){
+  var data = chart(c,pallette), total = data.length;
+  for(segment in data.sort(function(a,b){
+    return a.value < b.value ? 1 : -1;
+  })){
+    console.log();
+    $('<li/>')
+      .appendTo('.'+c)
+      .html('<span class="track" style="width: '+(((data[segment].value)*total/100)*100)+'%"></span><span class="label">' + data[segment].label + '</span>')
+      .addClass('bar');
   }
 
 }
@@ -79,6 +112,7 @@ $(function(){
   make('roles','PolarArea','bluetoblue');
   make('lang','Pie','greyscale');
   make('frameworks','Pie','greyscale');
+  bars('agency','greyscale');
 
   var $projects = $('.projects ul');
 

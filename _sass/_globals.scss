@@ -104,6 +104,13 @@ html,body,.wrapper{
   display: none;
 }
 
+
+.foot-note{
+  clear: both;
+  padding-top: 40px;
+  color: #aaa;
+}
+
 .projects{
   li{
     width: 33.33%;
@@ -126,6 +133,25 @@ html,body,.wrapper{
       width: auto;
       float: none;
     }
+  }
+}
+
+.roles{
+  a{
+    display: none;
+  }
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: $SM) {
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
   }
 }
 

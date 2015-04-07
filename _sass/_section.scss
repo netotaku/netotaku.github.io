@@ -3,7 +3,8 @@
 
 .section{
 
-  &.updates{
+  &.updates,
+  &.projects{
     background: #f5f5f5;
     padding: $doubleGutter 0px;
     padding-bottom: 0px;
@@ -18,7 +19,8 @@
   &.disqus,
   &.footer-tweet,
   &.footer-social,
-  &.footer-links{
+  &.footer-links,
+  &.projects{
     padding: $doubleGutter 0px;
   }
 
