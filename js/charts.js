@@ -64,17 +64,23 @@ function segments(el, data){
     $('<li>').appendTo($list).text(data[segment].label + ' ( '+ data[segment].value +' )');
   }
 
-  $list.find('li:gt(5)').hide();
+  console.log(el)
 
-  var segmentcount = $list.find('li').length;
+  if($('.'+el).hasClass('paginate')){
+    $list.find('li:gt(5)').hide();
 
-  if(segmentcount > limit){
-    $('<li/>').appendTo($list).html('<li><a href="#">'+ (segmentcount-limit) +' more</a></li>').on('click', function(e){
-      e.preventDefault();
-      $list.find('li').show();
-      $(this).hide();
-    });
+    var segmentcount = $list.find('li').length;
+
+    if(segmentcount > limit){
+      $('<li/>').appendTo($list).html('<li><a href="#">'+ ((segmentcount-limit)-1) +' more</a></li>').on('click', function(e){
+        e.preventDefault();
+        $list.find('li').show();
+        $(this).hide();
+      });
+    }
   }
+
+
 
 
 }

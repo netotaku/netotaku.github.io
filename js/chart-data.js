@@ -13,7 +13,8 @@ var charts = {
     bed: { label: 'Backend Developer' },
     prod:{ label: 'Producer' },
     ted: { label: 'Technical Director' },
-    ind: { label: 'Independent' }
+    ind: { label: 'Independent' },
+    des: { label: 'Web Designer' }
   },
 
   frameworks: {
@@ -57,7 +58,7 @@ var projects = [
     url: 'http://mediasmart.uk.com',
     frameworks: ['c5'],
     lang: ['html','sass','js','php'],
-    roles: ['fed','bed','ted'],
+    roles: ['fed','bed','ted','des'],
     status: 1,
     agency: ['ta']
   },{
@@ -89,7 +90,7 @@ var projects = [
     url: 'https://alisons.kitchen',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
-    roles: ['fed','bed','ted','ind'],
+    roles: ['fed','bed','ted','ind','des'],
     status: 1,
     agency: ['fr']
   },{
@@ -97,7 +98,7 @@ var projects = [
     url: 'http://gabrielleblackman.com',
     frameworks: ['c5','jQ'],
     lang: ['html','sass','js','php'],
-    roles: ['fed','bed','ted','ind'],
+    roles: ['fed','bed','ted','ind','des'],
     status: 1,
     agency: ['fr']
   },{
@@ -105,7 +106,7 @@ var projects = [
     url: 'http://gighub.co.uk',
     frameworks: ['slim','lara','jQ'],
     lang: ['html','sass','js','php','blade'],
-    roles: ['fed','bed','ted','ind'],
+    roles: ['fed','bed','ted','ind','des'],
     status: 1,
     agency: ['fr']
   },{
@@ -113,15 +114,15 @@ var projects = [
     url: 'http://kingandallen.co.uk',
     frameworks: ['besp','yui'],
     lang: ['html','css','js','php'],
-    roles: ['fed','bed','ind'],
-    status: 1,
+    roles: ['fed','bed','ind','des'],
+    status: 0,
     agency: ['fr']
   },{
     label: 'Scottish Dental',
     url: 'http://www.scottishdental.org',
     frameworks: ['besp','yui'],
     lang: ['html','css','js'],
-    roles: ['fed','ind'],
+    roles: ['fed','ind','des'],
     status: 0,
     agency: ['fr']
   },{
@@ -129,7 +130,7 @@ var projects = [
     url: 'http://www.rethink.org',
     frameworks: ['besp','flash'],
     lang: ['html','css','js'],
-    roles: ['fed','ind'],
+    roles: ['fed','ind','des'],
     status: 0,
     agency: ['fr']
   },{
@@ -137,7 +138,7 @@ var projects = [
     url: 'http://www.nathancollis.com',
     frameworks: ['besp','yui'],
     lang: ['html','css','js'],
-    roles: ['fed','ind'],
+    roles: ['fed','ind','des'],
     status: 0,
     agency: ['fr']
   },{
@@ -145,7 +146,7 @@ var projects = [
     url: 'http://www.creditcall.com',
     frameworks: ['wp','jQ'],
     lang: ['html','sass','js'],
-    roles: ['fed','ted'],
+    roles: ['fed','ted','des'],
     status: 1,
     agency: ['ta']
   },{
@@ -193,7 +194,7 @@ var projects = [
     url: 'http://makeupschoollondon.co.uk',
     frameworks: ['cake','jQ'],
     lang: ['html','css','js'],
-    roles: ['fed','bed'],
+    roles: ['fed','bed','des'],
     status: 0,
     agency: ['gv']
   },{

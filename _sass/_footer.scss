@@ -47,6 +47,9 @@
   a,i{
     color: #777;
   }
+  [data-scribe="element:url"]{
+    word-break: break-all;
+  }
   .user{
     display: none;
   }
