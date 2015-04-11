@@ -265,6 +265,14 @@ var projects = [
     status: 1,
     agency: ['gv']
   },{
+    label: 'Goram+Vincent',
+    url: 'http://goramandvincent.com',
+    frameworks: ['c5','jQ'],
+    lang: ['html','sass','js','php'],
+    roles: ['ted','fed','bed'],
+    status: 1,
+    agency: ['gv']
+  },{
     label: 'Somnium',
     url: 'http://somniumtech.com',
     frameworks: ['c5','jQ'],
