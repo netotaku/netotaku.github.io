@@ -115,6 +115,13 @@ html,body,.wrapper{
   li{
     width: 33.33%;
     float: left;
+    a{
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: auto;
+    }
   }
 }
 

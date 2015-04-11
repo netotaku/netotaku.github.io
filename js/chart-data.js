@@ -34,7 +34,10 @@ var charts = {
     shopify: { label: 'Shopify' },
     tumblr: { label: 'Tumblr' },
     drup: { label: 'Drupal' },
-    zend: { label: 'Zend' }
+    zend: { label: 'Zend' },
+    jk: { label: 'Jekyll' },
+    phg: { label: 'PhoneGap' },
+    mood: { label: 'Moodle' }
   },
 
   lang: {
@@ -110,6 +113,14 @@ var projects = [
     status: 1,
     agency: ['fr']
   },{
+    label: 'Super Dan',
+    url: 'http://superdan.io',
+    frameworks: ['jk'],
+    lang: ['html','sass'],
+    roles: ['fed','bed','ted','ind','des'],
+    status: 1,
+    agency: ['fr']
+  },{
     label: 'King &amp; Allen',
     url: 'http://kingandallen.co.uk',
     frameworks: ['besp','yui'],
@@ -142,6 +153,14 @@ var projects = [
     status: 0,
     agency: ['fr']
   },{
+    label: 'Ecodesk',
+    url: 'http://www.nathancollis.com',
+    frameworks: ['mood','flash'],
+    lang: ['html','css','js','php'],
+    roles: ['fed','ind'],
+    status: 0,
+    agency: ['fr']
+  },{
     label: 'CreditCall',
     url: 'http://www.creditcall.com',
     frameworks: ['wp','jQ'],
@@ -156,6 +175,38 @@ var projects = [
     lang: ['html','css','js'],
     roles: ['fed'],
     status: 0,
+    agency: ['e3']
+  },{
+    label: 'Kia Soul iBrochure',
+    url: 'http://www.kia.co.uk/new-cars/range/compact-cars/soul/view-ibrochure.aspx',
+    frameworks: ['score','jQ','phg'],
+    lang: ['html','css','js','php'],
+    roles: ['fed'],
+    status: 1,
+    agency: ['e3']
+  },{
+    label: 'Kia Cee\'d iBrochure',
+    url: 'http://www.kia.co.uk/new-cars/range/compact-cars/soul/view-ibrochure.aspx',
+    frameworks: ['score','jQ','phg'],
+    lang: ['html','css','js','php'],
+    roles: ['fed'],
+    status: 1,
+    agency: ['e3']
+  },{
+    label: 'Kia Picanto iBrochure',
+    url: 'http://www.kia.co.uk/new-cars/range/compact-cars/soul/view-ibrochure.aspx',
+    frameworks: ['score','jQ','phg'],
+    lang: ['html','css','js','php'],
+    roles: ['fed'],
+    status: 1,
+    agency: ['e3']
+  },{
+    label: 'Kia Sportage iBrochure',
+    url: 'http://www.kia.co.uk/new-cars/range/compact-cars/soul/view-ibrochure.aspx',
+    frameworks: ['score','jQ','phg'],
+    lang: ['html','css','js','php'],
+    roles: ['fed'],
+    status: 1,
     agency: ['e3']
   },{
     label: 'Philip Mould',
@@ -206,7 +257,6 @@ var projects = [
     status: 1,
     agency: ['gv']
   },{
-    //
     label: 'CKD Audit',
     url: 'http://www.ckdaudit.org.uk',
     frameworks: ['c5','jQ'],
