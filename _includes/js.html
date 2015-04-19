@@ -9,6 +9,20 @@
   </nav>
 </script>
 
+<script type="text/html" id="paginator">
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+      <% for(var i = 1; i <= pages; i++) { %>
+        <% if(i==cursor) { %>
+          <li class="active"><a href="#"><%=i%></a></li>
+        <% } else { %>
+          <li><a href="#"><%=i%></a></li>
+        <% } %>
+      <% } %>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</script>
+
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dbf29307cc266c2" async="async"></script>
 <script src="/vendor/underscore/underscore-min.js"></script>
 <script src="/vendor/twitter/post-fetcher.js"></script>
@@ -64,6 +78,54 @@
         $('body').toggleClass('show-dismissable');
       }
     });
+
+    ////////
+
+    var paginator = function($el){
+      var $lis = $el.children('li'),
+          lisPerPage = 3,
+          cursor = 0,
+          totalPages = Math.ceil( $lis.length / lisPerPage ),
+          turn = function(i){
+            if(i < totalPages && i > -1){
+              cursor = i;
+              var start = cursor*lisPerPage,
+                  end = start+lisPerPage;
+              $lis.hide().slice(start,end).show();
+              $pagination.removeClass('active').eq(cursor+1).addClass('active');
+            }
+          };
+
+          console.log(lisPerPage < $lis.length);
+
+      if(lisPerPage < $lis.length){
+
+        var tmp = _.template($('#paginator').html());
+
+        var $pagination = $(tmp({
+          pages: totalPages,
+          cursor: cursor
+        })).insertAfter($el).find('li').on('click', function(e){
+          e.preventDefault();
+          var $this = $(this),
+              i = $this.index()-1;
+          if($this.is(':first-child')){
+            i = cursor-1;
+          } else if($this.is(':last-child')){
+            i = cursor+1;
+          }
+          turn(i);
+        });
+        turn(cursor);
+      }
+    }
+
+    ////////
+
+    $(".paginate").each(function(){
+      new paginator($(this));
+    });
+
 
   })(jQuery);
 

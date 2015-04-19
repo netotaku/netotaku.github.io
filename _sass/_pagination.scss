@@ -1,0 +1,26 @@
+.pagination{
+  padding-bottom: 20px;
+  overflow: hidden;
+  li{
+    float: left;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    a{
+      display: block;
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
+      background: #ddd;
+      text-align: center;
+      text-decoration: none;
+      &:hover{
+        background: #c00;
+        color: #fff;
+      }
+    }
+    &.active a{
+      background: #c00;
+      color: #fff;
+    }
+  }
+}

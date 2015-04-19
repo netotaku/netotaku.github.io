@@ -3,7 +3,10 @@
     <div class="eight columns">
       <div class="type">
         <h2>Updates</h2>
+      </div>
+      <ul class="paginate">
         {% for post in site.posts %}
+        <li class="type">
           <article class="post">
             <header>
               <div class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</div>
@@ -13,8 +16,9 @@
               <div class="comment-count"><i class="fa fa-comment"></i> <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" class="count">comments</a></span></div>
             </header>
           </article>
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
     <div class="four columns">
 
