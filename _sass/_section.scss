@@ -16,6 +16,7 @@
     padding: 10px 0px;
   }
 
+  &.testimonials,
   &.disqus,
   &.footer-tweet,
   &.footer-social,
@@ -28,5 +29,10 @@
   &.disqus,
   &.footer-links{
     padding-bottom: 0px;
+  }
+
+
+  &.testimonials{
+    background: #eee;
   }
 }
