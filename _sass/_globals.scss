@@ -168,6 +168,22 @@ html,body,.wrapper{
   clear: both;
 }
 
+strong.lrg{
+  font-size: 1.6em;
+}
+
+blockquote{
+  font-family: georgia;
+  font-style: italic;
+  border-left: solid 4px #eee;
+  padding-left: 20px;
+  margin: 20px 0px;
+  cite{
+    display: block;
+    font-weight: bold;
+  }
+}
+
 // .dismissable{
 //   display: none;
 // }
