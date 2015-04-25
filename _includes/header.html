@@ -6,11 +6,11 @@
     <div class="twelve columns">
       <div class="type">
         {% if page.isHome %}
-          <h1><a href="/about">Nick Clarkson <i class="fa fa-chevron-right"></i></a></h2>
+          <h1><a href="/about"><span itemprop="name">Nick Clarkson</span> <i class="fa fa-chevron-right"></i></a></h2>
         {% else %}
-          <h1><a href="/">Nick Clarkson <i class="fa fa-home"></i></a></h2>
+          <h1><a href="/"><span itemprop="name">Nick Clarkson</span> <i class="fa fa-home"></i></a></h2>
         {% endif %}
-        <h2>Technical Director / Creative Technologist</h2>
+        <h2 itemprop="jobtitle">Technical Director / Creative Technologist</h2>
       </div>
       {% include social.html %}
     </div>
