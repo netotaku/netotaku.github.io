@@ -50,3 +50,12 @@
     }
   }
 }
+
+
+@media (max-width: $MD) {
+  .social{
+    .split{
+      clear: left;
+    }
+  }
+}

@@ -31,13 +31,11 @@
       .fa{
         font-size: 0.5em;
         color: rgba(255,255,255,.4);
-        // color: #666;
       }
     }
   }
   &.compact{
     background: url(/images/test2.jpg) no-repeat center;
-    // background: url(/images/shim.jpg) no-repeat bottom;
     background-size: cover;
     .caption{
       position: static;
@@ -46,9 +44,6 @@
     .social{
       display: none;
     }
-    // .type p:last-child{
-    //   padding-bottom: 0px;
-    // }
     h2{
       padding-bottom: 0px;
     }
@@ -81,9 +76,6 @@
     }
     h2{
       font-size: 1.6em;
-    }
-    .split{
-      clear: left;
     }
   }
 
