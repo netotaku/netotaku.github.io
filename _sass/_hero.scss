@@ -6,7 +6,9 @@
   }
 
   position: relative;
-  background: url(/images/test2.jpg) no-repeat bottom;
+  background-image: url(/images/nick-clarkson.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
   background-size: cover;
   .caption{
     width: 100%;
@@ -31,14 +33,11 @@
       .fa{
         font-size: 0.5em;
         color: rgba(255,255,255,.4);
-        // color: #666;
       }
     }
   }
   &.compact{
-    background: url(/images/test2.jpg) no-repeat center;
-    // background: url(/images/shim.jpg) no-repeat bottom;
-    background-size: cover;
+    background-position: center;
     .caption{
       position: static;
       padding: 70px 0px;
@@ -46,9 +45,6 @@
     .social{
       display: none;
     }
-    // .type p:last-child{
-    //   padding-bottom: 0px;
-    // }
     h2{
       padding-bottom: 0px;
     }
