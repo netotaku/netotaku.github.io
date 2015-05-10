@@ -9,3 +9,6 @@ github_username:  netotaku
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-last-modified-at
