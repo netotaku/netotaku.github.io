@@ -1,20 +1,34 @@
+<figure class="splash">
 
-{% include open.html %}
+  <figcaption>
 
-<figcaption class="caption">
-  <div class="container">
-    <div class="twelve columns">
+    <div class="brand">
+      <div class="container">
+        <div class="twelve columns">
 
-      <!-- <h1><a href="/about" itemprop="name">Nick Clarkson</a></h2>
-      <h2 itemprop="jobtitle">Technical Director / Creative Technologist</h2> -->
+          <a href="/"><img src="/images/brand.png"></a>
 
-      {% if page.isHome %}
-      {% else %}
-      {% endif %}
+          <h1><a href="/about" itemprop="name">Nick Clarkson</a></h2>
+          <h2 itemprop="jobtitle">Technical Director / Creative Technologist</h2>
 
-      <!--
-        {% include social.html %}
-      -->
+          {% if page.isHome %}
+          {% else %}
+          {% endif %}
+
+          <!--
+            {% include social.html %}
+          -->
+        </div>
+      </div>
     </div>
-  </div>
-</figcaption>
+
+
+    <div class="down-arrow">
+      <a href="#">
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+
+  </figcaption>
+
+</figure>

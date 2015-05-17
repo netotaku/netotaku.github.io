@@ -5,40 +5,9 @@ isHome: true
 
   {% include open.html %}
 
-  <figure class="splash">
-
-    <figcaption>
-
-      <div class="brand">
-        <div class="container">
-          <div class="twelve columns">
-
-            <img src="/images/brand.png">
-
-            <h1><a href="/about" itemprop="name">Nick Clarkson</a></h2>
-            <h2 itemprop="jobtitle">Technical Director / Creative Technologist</h2>
-
-            {% if page.isHome %}
-            {% else %}
-            {% endif %}
-
-            <!--
-              {% include social.html %}
-            -->
-          </div>
-        </div>
-      </div>
-
-
-      <div class="down-arrow">
-        <a href="#">
-          <i class="fa fa-chevron-down"></i>
-        </a>
-      </div>
-
-    </figcaption>
-
-  </figure>
+  <div class="home">
+    {% include header.html %}
+  </div>
 
   <div role="main">
 

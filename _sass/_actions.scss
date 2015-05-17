@@ -15,8 +15,6 @@ $H: 74px;
   &:hover{
     span{
       color: #ccc;
-      //display: inline-block;
-      //border-bottom: solid 1px #fff;
     }
   }
   &.burger{
@@ -38,9 +36,5 @@ $H: 74px;
 }
 
 @media (max-width: $MD) {
-  // .burger{
-  //   span{
-  //     display: none;
-  //   }
-  // }
+
 }
