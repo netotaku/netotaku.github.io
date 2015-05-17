@@ -3,6 +3,67 @@ layout: empty
 isHome: true
 ---
 
-  <figure class="hero home-hero">
-    {% include header.html %}
+  {% include open.html %}
+
+  <figure class="splash">
+
+    <figcaption>
+
+      <div class="brand">
+        <div class="container">
+          <div class="twelve columns">
+
+            <img src="/images/brand.png">
+
+            <h1><a href="/about" itemprop="name">Nick Clarkson</a></h2>
+            <h2 itemprop="jobtitle">Technical Director / Creative Technologist</h2>
+
+            {% if page.isHome %}
+            {% else %}
+            {% endif %}
+
+            <!--
+              {% include social.html %}
+            -->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="down-arrow">
+        <a href="#">
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+
+    </figcaption>
+
   </figure>
+
+  <div role="main">
+
+    <section class="container">
+      <article class="ten columns">
+        <div class="type">
+          <header>
+            <h1>{{ page.title }}</h1>
+          </header>
+
+          {% include content/intro.html %}
+
+          <h3>Read on</h3>
+
+          <ul>
+            <li><a href="/employment">Employment history</a></li>
+            <li><a href="/work">Technical skills and experience</a></li>
+            <li><a href="/speaking">Speaking notes and presentations</a></li>
+          </ul>
+
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  {% include updates.html %}
+  {% include footer.html %}

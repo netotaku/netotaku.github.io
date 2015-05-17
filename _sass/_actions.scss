@@ -23,6 +23,7 @@ $H: 74px;
     position: absolute;
     top: 0px;
     right: 0px;
+    z-index: 1;
   }
   &.likesharefollow{
     text-align: left;
@@ -37,9 +38,9 @@ $H: 74px;
 }
 
 @media (max-width: $MD) {
-  .burger{
-    span{
-      display: none;
-    }
-  }
+  // .burger{
+  //   span{
+  //     display: none;
+  //   }
+  // }
 }

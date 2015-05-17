@@ -1,0 +1,25 @@
+.brand{
+  *{
+    color: #fff;
+    text-decoration: none;
+  }
+  img{
+    max-width: 332px;
+    width: 332px;
+    height: auto;
+  }
+  h1{
+    display: none;
+    a{
+      text-indent: -999px;
+      display: block;
+      width: 332px;
+      height: 132px;
+      background: url(/images/brand.png) no-repeat center;
+    }
+  }
+  h2{
+    padding-left: 80px;
+    margin-top: -12px;
+  }
+}

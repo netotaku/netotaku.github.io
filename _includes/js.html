@@ -1,14 +1,4 @@
 
-<script type="text/html" id="menu-template">
-  <nav>
-    <ul>
-      <% $.each(data, function(){ %>
-        <li><a href="<%=this.href%>"><%=this.label%></a></li>
-      <% }) %>
-    </ul>
-  </nav>
-</script>
-
 <script type="text/html" id="paginator">
   <ul class="pagination">
     <li><a href="#">&laquo;</a></li>
@@ -27,6 +17,7 @@
 <script src="/vendor/underscore/underscore-min.js"></script>
 <script src="/vendor/twitter/post-fetcher.js"></script>
 <script src="/vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="/vendor/stellar/jquery.stellar.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
 <script type="text/javascript">
@@ -47,6 +38,10 @@
   (function($){
     "use strict";
 
+    $('.down-arrow').on('click', function(e){
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: $('[role=main]').offset().top }, 450);
+    });
 
     $('.action').on('click', function(e){
       e.preventDefault();
@@ -96,7 +91,7 @@
             }
           };
 
-          console.log(lisPerPage < $lis.length);
+          // console.log(lisPerPage < $lis.length);
 
       if(lisPerPage < $lis.length){
 

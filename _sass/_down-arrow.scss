@@ -1,0 +1,26 @@
+.down-arrow{
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+  a{
+    margin: auto;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: solid 4px #fff;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+      background: rbga(255,255,255,.5);
+    }
+    .fa{
+      display: block;
+      height: 72px;
+      line-height: 72px;
+      font-size: 2em;
+    }
+  }
+}

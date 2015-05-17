@@ -23,7 +23,7 @@ html{
   line-height: 1.75;
   font-size: 1em;
 
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
@@ -45,7 +45,7 @@ html{
   }
   h1{
     font-size: 2.8em;
-    letter-spacing: -2px;
+    // letter-spacing: -2px;
     line-height: 1.1;
     padding-bottom: 40px;
   }
@@ -55,16 +55,9 @@ html{
     font-size: 1.6em;
     letter-spacing: 0px;
     line-height: 1.5;
-    letter-spacing: -1px;
+    // letter-spacing: -1px;
   }
   p, ul, ol{
     padding-bottom: $gutter;
   }
-  // p:last-child{
-  //   padding-bottom: $doubleGutter;
-  // }
-  // p:first-child{
-  //   font-size: 2em;
-  //   font-style: italic;
-  // }
 }

@@ -1,0 +1,38 @@
+.splash{
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  background-image: url(/images/nick-clarkson.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+
+  figcaption{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .brand{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -66px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .splash{
+    height: 0px;
+    padding-top: 40%;
+    background-position: center;
+  }
+
+}
