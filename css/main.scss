@@ -1,31 +1,47 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+// @import "main-tabs";
+
+
 @charset "utf-8";
 
-@import "reset";
+
 @import "var";
 @import "globals";
 @import "type";
-@import "syntax";
-@import "skeleton";
+
+@import "lib/reset";
+@import "lib/skeleton";
+@import "lib/syntax";
+
+@import "production/breadcrumb";
+@import "production/social";
+@import "production/modal";
+@import "production/pagination";
+@import "production/flash";
+
+
+
 @import "section";
 
 @import "hero";
-@import "social";
-@import "breadcrumb";
+@import "splash";
+
 @import "post";
-@import "main-tabs";
+
 @import "mobile";
-@import "flash";
+
 @import "form";
 
 @import "aside";
 @import "footer";
 @import "actions";
 
-@import "modal";
+
 @import "chart";
-@import "pagination";
 
 @import "position";
+
+@import "brand";

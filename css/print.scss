@@ -1,0 +1,58 @@
+---
+---
+@import "lib/reset";
+@import "lib/skeleton";
+
+@import "position";
+@import "var";
+@import "type";
+
+.dont-print{
+  display: none;
+}
+
+.printable{
+  padding: 50px;
+  text-align: center;
+  .type{
+    h2{
+      font-size: 2em;
+    }
+  }
+
+  [role=main]{}
+
+  .hero{
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    img{
+      margin-top: -138px;
+    }
+  }
+
+  .header{
+    margin-bottom: 50px;
+    h1,h2,h3{
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  section{
+    margin-bottom: 50px;
+  }
+
+  .type{
+    text-align: left;
+    margin: auto;
+    max-width: 900px;
+  }
+  .position{
+    margin-bottom: 0px;
+    h2,h3{
+      padding-bottom: 0px;
+      font-size: 1.4em;
+    }
+  }
+}

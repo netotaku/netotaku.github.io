@@ -15,14 +15,13 @@ $H: 74px;
   &:hover{
     span{
       color: #ccc;
-      //display: inline-block;
-      //border-bottom: solid 1px #fff;
     }
   }
   &.burger{
     position: absolute;
     top: 0px;
     right: 0px;
+    z-index: 1;
   }
   &.likesharefollow{
     text-align: left;
@@ -37,9 +36,5 @@ $H: 74px;
 }
 
 @media (max-width: $MD) {
-  .burger{
-    span{
-      display: none;
-    }
-  }
+
 }

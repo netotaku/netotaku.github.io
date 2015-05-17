@@ -3,6 +3,36 @@ layout: empty
 isHome: true
 ---
 
-  <figure class="hero home-hero">
+  {% include open.html %}
+
+  <div class="home">
     {% include header.html %}
-  </figure>
+  </div>
+
+  <div role="main">
+
+    <section class="container">
+      <article class="ten columns">
+        <div class="type">
+          <header>
+            <h1>{{ page.title }}</h1>
+          </header>
+
+          {% include content/intro.html %}
+
+          <h3>Read on</h3>
+
+          <ul>
+            <li><a href="/employment">Employment history</a></li>
+            <li><a href="/work">Technical skills and experience</a></li>
+            <li><a href="/speaking">Speaking notes and presentations</a></li>
+          </ul>
+
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  {% include updates.html %}
+  {% include footer.html %}

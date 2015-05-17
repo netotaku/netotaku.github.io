@@ -5,7 +5,7 @@ $modalH: 140px;
   }
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0px;
   left: 0px;
   height: 100%;
@@ -22,7 +22,6 @@ $modalH: 140px;
       margin: auto;
       max-width: 300px;
       height: $modalH;
-      //background: rgba(0,0,0,.6);
       padding: 20px;
       color: #fff;
       .addthis_sharing_toolbox{

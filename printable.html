@@ -1,0 +1,50 @@
+---
+layout: null
+---
+
+<html>
+  <head>
+    <link href="{{ "/css/print.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Nick Clarkson, CV</title>
+  </head>
+  <body class="printable">
+
+    <main class="type">
+
+      <header class="header">
+        <h1>Nick Clarkson</h1>
+        <h2>Curriculum vitae</h2>
+        <h3>{% last_modified_at %}</h3>
+      </header>
+
+      <figure class="hero">
+        <img src="/images/nick-clarkson.jpg">
+      </figure>
+
+      <div role="main">
+
+        <section>
+          {% include content/intro.html %}
+        </section>
+
+        <h2>Employment</h2>
+
+        <section>
+          {% include content/employment.html %}
+        </section>
+
+        <footer>
+          <ul>
+            <li><em>Referees available on request</em></li>
+            <li><a href="http://clarkson.io">http://clarkson.io</a></li>
+            <li><a href="mailto:nick@clarkson.io">nick@clarkson.io</a></li>
+          </li>
+        </footer>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

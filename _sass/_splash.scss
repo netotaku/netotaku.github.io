@@ -1,0 +1,122 @@
+
+
+
+.splash{
+
+  position: relative;
+
+  height: 0px;
+  padding-top: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/nick-clarkson.jpg);
+
+  .brand{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -66px;
+  }
+
+  figcaption{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .down-arrow{
+    display: none;
+  }
+
+}
+
+
+
+.home{
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .splash{
+    height: 100%;
+    width: 100%;
+
+    background-position: bottom;
+    background-attachment: fixed;
+
+    .down-arrow{
+      display: block;
+      position: absolute;
+      text-align: center;
+      bottom: 0px;
+      width: 100%;
+      padding-bottom: 20px;
+      a{
+        margin: auto;
+        display: block;
+        width: 80px;
+        height: 80px;
+        border: solid 4px #fff;
+        border-radius: 50%;
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+          background: rbga(255,255,255,.5);
+        }
+        .fa{
+          display: block;
+          height: 72px;
+          line-height: 72px;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .splash{
+
+  }
+
+}
+
+
+@media (max-width: 690px) {
+
+  .splash{
+    height: auto;
+    padding: 40px 0px;
+    figcaption,
+    .brand{
+      position: static;
+    }
+
+    .brand{
+      margin-top: 0px;
+      img{
+        width: 200px;
+        height: auto;
+      }
+      h2{
+        display: none;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .splash{
+    height: 280px;
+  }
+
+}
