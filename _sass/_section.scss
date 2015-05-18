@@ -26,11 +26,13 @@
   }
 
 
-  &.disqus,
-  &.footer-links{
+  &.disqus{
     padding-bottom: 0px;
   }
 
+  &.footer-links{
+    padding-bottom: 20px;
+  }
 
   &.testimonials{
     background: #eee;

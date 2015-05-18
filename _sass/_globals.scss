@@ -68,24 +68,20 @@ html,body,.wrapper{
   display: none;
 }
 
-
-.foot-note{
-  clear: both;
-  padding-top: 40px;
-  font-style: italic;
-  color: #aaa;
-}
-
 .projects{
-  li{
-    width: 33.33%;
-    float: left;
-    a{
-      display: block;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      width: auto;
+  ul{
+    margin-left: 0px!important;
+    overflow: hidden;
+    li{
+      width: 33.33%;
+      float: left;
+      a{
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+      }
     }
   }
 }
@@ -93,17 +89,21 @@ html,body,.wrapper{
 
 @media (max-width: $MD) {
   .projects{
-    li{
-      width: 50%;
+    ul{
+      li{
+        width: 50%;
+      }
     }
   }
 }
 
 @media (max-width: $SM) {
   .projects{
-    li{
-      width: auto;
-      float: none;
+    ul{
+      li{
+        width: auto;
+        float: none;
+      }
     }
   }
 }

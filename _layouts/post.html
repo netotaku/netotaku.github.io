@@ -26,7 +26,7 @@ layout: default
       <div class="type post full">
         <article class="post">
           <header>
-            <div class="time"><i class="fa fa-clock-o"></i> {{ page.date | date: "%b %-d, %Y" }}</div>
+            <time class="time"><i class="fa fa-clock-o"></i> {{ page.date | date: "%b %-d, %Y" }}</time>
             <h1>{{ page.title }}</h1>
             <div class="comment-count"><i class="fa fa-comment"></i> <a href="{{ page.url | prepend: site.baseurl }}#disqus_thread" class="count">comments</a></span></div>
           </header>

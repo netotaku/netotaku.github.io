@@ -1,12 +1,11 @@
 
 .footer-links{
-  padding-bottom: 0px;
   background: #222;
   .col{
     float: left;
     width: 25%;
   }
-  background: #222 url(/images/The-Agency-Logo.png) no-repeat right;
+  // background: #222 url(/images/The-Agency-Logo.png) no-repeat right;
   .type{
     *{
       color: #ccc;
@@ -15,7 +14,7 @@
   *{
     color: #ccc;
   }
-  .type{
+  ul{
     padding-bottom: $gutter;
   }
   h2{

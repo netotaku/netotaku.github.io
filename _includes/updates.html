@@ -9,7 +9,7 @@
         <li class="type">
           <article class="post">
             <header>
-              <div class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</div>
+              <time class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</time>
               <h2>
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               </h2>
