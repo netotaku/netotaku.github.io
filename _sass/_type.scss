@@ -61,6 +61,16 @@ html{
     font-size: 1.3em;
   }
 
+  blockquote{
+    p{
+      padding: 0px;
+      margin: 0px;
+      padding-left: 20px;
+    }
+    cite{
+      margin: 20px 0px;
+    }
+  }
 
   p, ul, ol{
     padding-bottom: $gutter;
@@ -81,7 +91,7 @@ html{
 
   .comment-count{
     color: $highlight;
-    padding-bottom: 20px;
+    padding-bottom: $doubleGutter;
   }
 
   small{
