@@ -14,12 +14,13 @@ layout: default
     <div class="twelve columns">
       <nav class="breadcrumb">
         <ul>
-          <li><a href="/">Home</a></li>          
+          <li><a href="/">Home</a></li>
           <li>{{ page.title }}</li>
         </ul>
       </nav>
     </div>
   </section>
+  
   <section class="container">
     <article class="twelve columns">
       <div class="type post full">
@@ -34,12 +35,16 @@ layout: default
       </div>
     </article>
   </section>
-  <section class="section disqus container">
-    <div class="twelve columns">
-      <div id="disqus_thread"></div>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  <section class="section disqus">
+    <div class="container">
+      <div class="twelve columns">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
     </div>
   </section>
+
 </div>
 
 {% include updates.html %}
