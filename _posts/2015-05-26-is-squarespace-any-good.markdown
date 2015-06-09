@@ -5,7 +5,7 @@ date:   2015-05-26 20:53:00
 categories: CMS Squarespace
 ---
 
-A few years back myself and [@spyou](http://twitter.com/spyou) found ourselves discussing the concept of a SaaS CMS over a smoke break ( something that neither of us do anymore ). He had a few ideas about how it would fit together. I obviously saw the benefits, but wasn't convinced, mainly from my own experience of the issues of sending content and configuration over REST, but also the compexity of developing a CMS from scratch in an era where so many solid solutions already existed and the sheer volume of feature expected of a CMS would make getting to MVP a lengthy struggle.
+A few years back myself and [@spyou](http://twitter.com/spyou) found ourselves discussing the concept of a SaaS CMS over a smoke break ( something that neither of us do anymore ). He had a few ideas about how it would fit together. I obviously saw the benefits, but wasn't convinced, mainly from my own experience of the issues of sending content and configuration over REST, but also the complexity of developing a CMS from scratch in an era where so many solid solutions already existed and the sheer volume of feature expected of a CMS would make getting to MVP a lengthy struggle.
 
 Spin forward a couple of years. @spyou moved on and created [digestive.io](http://digestive.io) as CookiesHQ's pet project and Squarespace starts to gain critical mass.
 
@@ -17,15 +17,15 @@ Spin forward a couple of years. @spyou moved on and created [digestive.io](http:
   <cite><a href="http://en.m.wikipedia.org/wiki/Squarespace">http://en.m.wikipedia.org/wiki/Squarespace</a></cite>
 </blockquote>
 
-Imagine 1&1mywebsite.com (sic) but built with developer sensibilities. Essentially it has two applications. The first allows the technically uninitiated to signup and build a web site from a relatively limited, but never the less, well designed set of templates. To achieve this you need a base level account, with comes in at $8 PCM. This gives you a light set of configuration options, such a colours, fonts and imagery and some extra basics like custom domains which can either be supplied by Squarespace or a 3rd party. CMS features are basic, there is a simple media manager, you can work in markdown or basic WYSIWYGs similar to [OctoberCMS](http://octobercms.com). I don't think basic features sets are a draw back in this instance, in my opinion most of the mature CMSs suffer from unnecessary complexity due to feature bloat.
+Imagine 1&1mywebsite.com (sic) but built with developer sensibilities. Essentially it has two applications. The first allows the technically uninitiated to signup and build a web site from a relatively limited, but never the less, well designed set of templates. To achieve this you need a base level account, with comes in at $8 PCM. This gives you a light set of configuration options, such a colours, fonts and imagery and some extra basics like custom domains which can either be supplied by Squarespace or a 3rd party. CMS features are basic, there is a simple media manager, you can work in markdown or basic WYSIWYGs similar to [OctoberCMS](http://octobercms.com). I don't think basic features sets are a draw back in this instance, in my opinion most of the mature CMSs suffer from unnecessary complexity.
 
 The second application is a developer mode. This is available to business accounts that start at around $20 PCM. Essentially this gives you a GIT repo of the theme that you can checkout and work on locally then push for deployment.
 
-This is an interesting approach. I always thought a SaaS CMS would serve an API which services like [http://contentful.com](http://contentful.com) work. The reality of which transcended CMS in to an open data style 'model everything with meta' approach. This seemed like an obvious move but the added flexibility brings complexity in set up and consumption and hits performance. Squarespace does have an API, however this doesn't seem like the normal route.
+This is an interesting approach. I always thought a SaaS CMS would serve an API which is how services like [http://contentful.com](http://contentful.com) work. The reality of which transcended CMS in to an open data style 'model everything with meta' approach. This seemed like an obvious move but the added flexibility brings complexity and hits performance. Squarespace does have an API, however this doesn't seem like the normal route.
 
-The Squarespace theme is essentially a set of what seems to be Handlebars templates, JSON configuration and less scripts. There is also a liberal smattering of YUI ( an underrated old friend )  so it all feels familiar. I went from creating an account to making some code changes in a couple of hours with no previous experience and relying purely on the documentation and code examples.
+The Squarespace theme is essentially a set of Handlebars templates, JSON configuration and less scripts. There is also a liberal smattering of YUI ( an underrated old friend ) so it all feels familiar. I went from creating an account to making some code changes in a couple of hours with no previous experience and relying purely on the documentation and code examples.
 
-I wanted to understand Squarespace. From what I had heard it could potentially fill a gap in the £1000 quick web builds that we get asked to produce at TheAgency from time to time. I have always believed that as these could be profitable if we could move quickly on them and on the understanding that they didn't increase our support and maintenance footprint. Squarespace seems to deliver on this but realistically only using one of the off the shelf templates as a start point.
+I wanted to understand Squarespace. From what I had heard it could potentially fill a gap in the £1000 quick web builds that we get asked to produce at TheAgency from time to time. I believe these projects can be profitable if we could move quickly on them and they don't increase our support and maintenance footprint. Squarespace seems to deliver on this but realistically only when using one of the off the shelf templates as a start point.
 
 ## Workflow headaches
 
@@ -33,7 +33,7 @@ The main issue I have with it so far is the work flow. I have only found one way
 
 [https://github.com/kitajchuk/node-squarespace-server](https://github.com/kitajchuk/node-squarespace-server)
 
-This runs a local node server that uses the Squarespace API to interact with the live data. Unfortunately, it doesn't seem to work very well. To date it hasn't complied any Less changes and you need to stop / start and clear the cache to see changes made in the on the Squarespace site.
+This runs a local Node server that uses the Squarespace API to interact with the live data. Unfortunately, it doesn't seem to work very well. To date it hasn't complied any Less changes and you need to stop / start and clear the cache to see changes made in the on the Squarespace site.
 
 This will improve and it is ok for initial development, however I can see it becoming an issue once the site is live. The only way to make a staging site is to create a separate account which doesn't feel right. It would also have its own repo rather than its own branch. Therefore, working on projects that share themes with a team will be difficult along with long term support and maintenance.
 
