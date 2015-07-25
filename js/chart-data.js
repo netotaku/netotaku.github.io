@@ -41,6 +41,7 @@ var charts = {
   },
 
   lang: {
+    loc: { label: 'Localisation' },
     html: { label: 'HTML' },
     sass: { label: 'SASS' },
     css: { label: 'CSS' },
@@ -57,6 +58,22 @@ var charts = {
 
 var projects = [
   {
+    label: 'Welsh Beef and Lamb',
+    url: 'http://eatwelshlambandwelshbeef.com',
+    frameworks: ['c5'],
+    lang: ['html','sass','js','php','loc'],
+    roles: ['fed','bed','ted','des'],
+    status: 1,
+    agency: ['ta']
+  },{
+    label: 'Porc.Wales',
+    url: 'http://porc.wales',
+    frameworks: ['c5'],
+    lang: ['html','sass','js','php','loc'],
+    roles: ['fed','bed','ted','des'],
+    status: 1,
+    agency: ['ta']
+  },{
     label: 'MediaSmart',
     url: 'http://mediasmart.uk.com',
     frameworks: ['c5'],
