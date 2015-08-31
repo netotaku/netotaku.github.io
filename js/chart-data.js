@@ -18,6 +18,7 @@ var charts = {
   },
 
   frameworks: {
+    oct: { label: 'OctoberCMS' },
     modx: { label: 'ModX' },
     c5: { label: 'Concrete5' },
     wp: { label: 'Wordpress' },
@@ -58,6 +59,22 @@ var charts = {
 
 var projects = [
   {
+    label: 'Pentathlon GB',
+    url: 'http://beta.pentathlongb.org',
+    frameworks: ['oct'],
+    lang: ['html','sass','js','php'],
+    roles: ['fed','bed','ted','des'],
+    status: 1,
+    agency: ['ta']
+  },{
+    label: 'AUK',
+    url: 'http://www.agencyuk.com',
+    frameworks: ['wp'],
+    lang: ['html','sass','js','php'],
+    roles: ['fed','bed','ted','des'],
+    status: 1,
+    agency: ['ta']
+  },{
     label: 'Welsh Beef and Lamb',
     url: 'http://eatwelshlambandwelshbeef.com',
     frameworks: ['c5'],
@@ -271,7 +288,7 @@ var projects = [
     frameworks: ['tumblr'],
     lang: ['html'],
     roles: ['ted'],
-    status: 1,
+    status: 0,
     agency: ['gv']
   },{
     label: 'CKD Audit',

@@ -64,7 +64,7 @@ function segments(el, data){
     $('<li>').appendTo($list).text(data[segment].label + ' ( '+ data[segment].value +' )');
   }
 
-  console.log(el)
+  // console.log(el)
 
   if($('.'+el).hasClass('paginate')){
     $list.find('li:gt(5)').hide();
@@ -111,9 +111,10 @@ function bars(c, pallette){
 
 $(function(){
 
+  $('#total').html(projects.length);
+
   Chart.defaults.global.responsive = true;
   Chart.defaults.global.maintainAspectRatio = true;
-  // Chart.defaults.Doughnut.segmentShowStroke = false;
 
   make('roles','PolarArea','bluetoblue');
   make('lang','Pie','greyscale');
