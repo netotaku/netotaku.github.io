@@ -21,7 +21,7 @@ permalink: /speaking/
 
 <section class="tab" id="frontend-house-style">
 
-<h2>Fontend House Style</h2>
+<h2>Frontend House Style</h2>
 
 <div class="ratio">
 <iframe src="https://docs.google.com/presentation/d/1plZvDw7iItwUopDqBc3jtQUVA39Iev4vND_L0b-qaZs/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
