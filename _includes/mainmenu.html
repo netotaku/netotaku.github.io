@@ -16,18 +16,20 @@
       </li>
       {% for page in site.pages %}
         {% if page.title %}
-          <li>
-            <script>
-              if(window.location.pathname == "{{ page.url }}"){
-                document.write('<a class="selected" href="{{ url }}">{{ page.title }}</a>');
-              } else {
-                document.write('<a href="{{ page.url }}">{{ page.title }}</a>');
-              }
-            </script>
-            <noscript>
-              <a class="selected" href="{{ url }}">{{ page.title }}</a>
-            </noscript>
-          </li>
+          {% unless page.show_in_nav == false %}
+            <li>
+              <script>
+                if(window.location.pathname == "{{ page.url }}"){
+                  document.write('<a class="selected" href="{{ url }}">{{ page.title }}</a>');
+                } else {
+                  document.write('<a href="{{ page.url }}">{{ page.title }}</a>');
+                }
+              </script>
+              <noscript>
+                <a class="selected" href="{{ url }}">{{ page.title }}</a>
+              </noscript>
+            </li>
+          {% endunless %}
         {% endif %}
       {% endfor %}
     </ul>

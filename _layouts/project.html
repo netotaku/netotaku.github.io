@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<div class="project {{ page.class_name }}">
+
+  <header>
+    <div class="hero">
+      <div class="container">
+        <div class="twelve columns">
+
+          <div class="viewer">
+            <div class="position">
+              <div class="device desktop"></div>
+              <div class="device tablet"></div>
+              <div class="device phone"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div role="main">
+
+    <section class="container">
+      <div class="twelve columns">
+        <nav class="breadcrumb">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">Work</a></li>
+            <li>{{ page.title }}</li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+
+    <section class="container">
+      <article class="twelve columns">
+        <div class="type">
+
+          <header>
+            <h1>{{ page.title }}</h1>
+          </header>
+
+          {{ content }}
+
+        </div>
+      </article>
+    </section>
+  </div>
+
+</div>
+
+<script>
+
+
+
+
+ $(function(){
+
+   var $window = $(window), $hero = $('.hero'), $viewer = $('.viewer');
+
+   var c = (function(){
+
+     return {
+
+       Y: function(){ return $viewer.height()/2 },
+       X: function(){ return $viewer.width()/2 }
+
+     }
+
+   })();
+
+   $hero.mousemove(function(e){
+
+     var exp = 0.04,
+         degX = Math.round((c.X()-e.pageX)*exp),
+         degY = Math.round((c.Y()-e.pageY)*exp);
+
+    $viewer.css('transform', "rotateX( " + degY + "deg ) rotateY( " + degX + "deg )");
+
+   });
+ });
+
+
+</script>

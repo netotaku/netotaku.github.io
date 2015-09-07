@@ -1,0 +1,91 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+.project{
+  .hero{
+    padding: 50px 0;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  .viewer{
+
+    margin: auto;
+
+    height: 540px;
+    width: 960px;
+
+    position: relative;
+
+    -webkit-transition: all 0.2s ease-in ;
+    -moz-transition: all 0.2s ease-in ;
+    -ms-transition: all 0.2s ease-in ;
+    -o-transition: all 0.2s ease-in ;
+    transition: all 0.2s ease-in ;
+
+    -webkit-transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    -webkit-perspective: 600;
+
+    .device{
+      position: absolute;
+      box-shadow: -90px -5px 156px 22px rgba(0,0,0,0.3);
+      &.desktop{
+        // background: #eee;
+        width: 800px;
+        height: 500px;
+      }
+      &.tablet{
+        // background: #ccc;
+        width: 300px;
+        height: 400px;
+        transform: translateZ(40px);
+        right: 0px;
+        top: 98px;
+      }
+      &.phone{
+        // background: #aaa;
+        width: 135px;
+        height: 200px;
+        transform: translateZ(80px);
+        left: 588px;
+        top: 300px;
+      }
+    }
+  }
+
+  &.auk{
+    .hero{
+      background: url(/images/auk-background.jpg) no-repeat 0 0;
+      background-size: cover;
+    }
+    .desktop{
+      background: url(/images/auk-desktop.jpg) no-repeat 0 0;
+    }
+    .tablet{
+      background: url(/images/auk-tablet.jpg) no-repeat 0 0;
+    }
+    .phone{
+      background: url(/images/auk-phone.jpg) no-repeat 0 0;
+    }
+  }
+
+  &.ak{
+    .hero{
+      background: url(/images/ak-background.jpg) no-repeat 0 0;
+      background-size: cover;
+    }
+    .desktop{
+      background: url(/images/ak-desktop.jpg) no-repeat 0 0;
+    }
+    .tablet{
+      background: url(/images/ak-tablet.jpg) no-repeat 0 0;
+    }
+    .phone{
+      background: url(/images/ak-phone.jpg) no-repeat 0 0;
+    }
+  }
+
+}
