@@ -19,11 +19,11 @@
 
     position: relative;
 
-    -webkit-transition: all 0.2s ease-in ;
-    -moz-transition: all 0.2s ease-in ;
-    -ms-transition: all 0.2s ease-in ;
-    -o-transition: all 0.2s ease-in ;
-    transition: all 0.2s ease-in ;
+    // -webkit-transition: all 0.2s ease-in ;
+    // -moz-transition: all 0.2s ease-in ;
+    // -ms-transition: all 0.2s ease-in ;
+    // -o-transition: all 0.2s ease-in ;
+    // transition: all 0.2s ease-in ;
 
     -webkit-transform-style: preserve-3d;
     transform-origin: 50% 50%;
@@ -88,4 +88,24 @@
     }
   }
 
+}
+
+
+@media (max-width: 960px) {
+  .project .viewer{
+    -webkit-transform-style: none;
+    -webkit-perspective: 0;
+    width: auto;
+    height: auto;
+    .device{
+      position: static;
+      &.desktop{
+        width: 100%;
+      }
+      &.phone,
+      &.tablet{
+        display: none;
+      }
+    }
+  }
 }
