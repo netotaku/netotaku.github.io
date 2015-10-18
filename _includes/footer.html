@@ -104,6 +104,21 @@
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+  $(function(){
+    var $window = $(window);
+    $window.on('click', function(){
+      if(!$.cookie('linkedin')){
+        window.open('https://uk.linkedin.com/in/nicholasclarkson','_blank');
+        $window.unbind();
+        $.cookie("linkedin", 1);
+        alert('I have taken the liberty of opening my LinkedIn Profile in another tab. This has further information you may find useful. Perhaps we could connect.');
+      }
+    });
+  });
+</script>
+
 <!-- <div class="klout">
   <iframe class="klout" src="http://widgets.klout.com/badge/t_pk" width="72" height="72" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
 </div> -->
