@@ -25,9 +25,7 @@
                   document.write('<a href="{{ page.url }}">{{ page.title }}</a>');
                 }
               </script>
-              <noscript>
-                <a class="selected" href="{{ url }}">{{ page.title }}</a>
-              </noscript>
+              <noscript><a class="selected" href="{{ url }}">{{ page.title }}</a></noscript>
             </li>
           {% endunless %}
         {% endif %}

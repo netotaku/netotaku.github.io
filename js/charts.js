@@ -100,7 +100,7 @@ function bars(c, pallette){
   for(segment in data.sort(function(a,b){
     return a.value < b.value ? 1 : -1;
   })){
-    console.log();
+
     $('<li/>')
       .appendTo('.'+c)
       .html('<span class="track" style="width: '+(((data[segment].value)*total/100)*100)+'%"></span><span class="label">' + data[segment].label + '</span>')

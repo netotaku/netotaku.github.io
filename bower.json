@@ -28,6 +28,7 @@
     "hasher": "~1.2.0",
     "underscore": "~1.7.0",
     "jquery.cookie": "https://github.com/carhartl/jquery-cookie.git#~1.4.1",
-    "Chart.js": "~1.0.2"
+    "Chart.js": "~1.0.2",
+    "jquery-timeago": "https://github.com/rmm5t/jquery-timeago.git#~1.4.3"
   }
 }
