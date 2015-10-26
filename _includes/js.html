@@ -43,9 +43,9 @@
       });
     }
 
-    var uri = 'https://api.github.com/repos/netotaku/netotaku.github.io/commits';
-    $.getJSON(uri, function(data){
-      console.log(data[0].commit);
+    $.getJSON('https://api.github.com/repos/netotaku/netotaku.github.io/commits', function(data){
+      var commit = data[0].commit;
+      $('#last-updated').html('Last updated <a href="' + commit.url + '" target="_blank">' + $.timeago(commit.author.date) + '</a>');
     });
 
   })(jQuery);

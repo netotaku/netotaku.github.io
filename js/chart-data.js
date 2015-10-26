@@ -18,6 +18,7 @@ var charts = {
   },
 
   frameworks: {
+    ss: { label: 'Squarespace' },
     oct: { label: 'OctoberCMS' },
     modx: { label: 'ModX' },
     c5: { label: 'Concrete5' },
@@ -59,6 +60,14 @@ var charts = {
 
 var projects = [
   {
+    label: 'Herd PR',
+    url: 'http://www.herdpr.co.uk',
+    frameworks: ['ss'],
+    lang: ['css'],
+    roles: ['fed','ted','des'],
+    status: 1,
+    agency: ['fr']
+  },{
     label: 'Pentathlon GB',
     url: 'http://beta.pentathlongb.org',
     frameworks: ['oct'],
