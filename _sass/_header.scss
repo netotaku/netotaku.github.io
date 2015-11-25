@@ -1,3 +1,44 @@
 .header{
-  
+
+}
+.fixed-header{
+  padding: 0px 20px;
+  line-height: 74px;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: #c00;
+  color: #fff;
+  .action{
+    color: #fff;
+    &:active,
+    &:hover{
+      color: #fff;
+    }
+  }
+  .name{
+    font-weight: 900;
+  }
+  .mini-menu{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+  }
+}
+
+.scrolling{
+  .fixed-header{
+    display: block;
+  }
+}
+
+@media (max-width: 499px) {
+  .fixed-header{
+    .burger{
+      span{
+        display: none;
+      }
+    }
+  }
 }

@@ -24,6 +24,10 @@
   (function($){
     "use strict";
 
+    var $burger = $('.burger'),
+        $window = $(window),
+        $body = $(document.body);
+
     $('.down-arrow').on('click', function(e){
       e.preventDefault();
       $("html, body").animate({ scrollTop: $('[role=main]').offset().top }, 450);
@@ -46,6 +50,14 @@
     $.getJSON('https://api.github.com/repos/netotaku/netotaku.github.io/commits', function(data){
       var commit = data[0].commit;
       $('#last-updated').html('Last updated <a href="' + commit.url + '" target="_blank">' + $.timeago(commit.author.date) + '</a>');
+    });
+
+    $window.on('scroll load', function(){
+      if($window.scrollTop() > $burger.height()){
+        $body.addClass('scrolling');
+      } else {
+        $body.removeClass('scrolling');
+      }
     });
 
   })(jQuery);
