@@ -17,12 +17,7 @@ $H: 74px;
       color: #ccc;
     }
   }
-  &.burger{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 1;
-  }
+
   &.likesharefollow{
     text-align: left;
     line-height: 47px;
@@ -32,6 +27,17 @@ $H: 74px;
       line-height: 47px;
       height: 47px;
     }
+  }
+}
+
+.top-right{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  .link{
+    line-height: 74px;
+    float: left;
   }
 }
 

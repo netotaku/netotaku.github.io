@@ -34,11 +34,12 @@
 }
 
 @media (max-width: 499px) {
-  .fixed-header{
-    .burger{
-      span{
-        display: none;
-      }
+  .role{
+    display: none;
+  }
+  .link{
+    span{
+      display: none;
     }
   }
 }
