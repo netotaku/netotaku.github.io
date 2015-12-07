@@ -60,6 +60,14 @@ var charts = {
 
 var projects = [
   {
+    label: 'Hannah &amp; The Heartbreak',
+    url: 'http://www.hannahandtheheartbreak.com',
+    frameworks: ['ss'],
+    lang: ['css'],
+    roles: ['fed','ted','des'],
+    status: 1,
+    agency: ['fr']
+  },  {
     label: 'Herd PR',
     url: 'http://www.herdpr.co.uk',
     frameworks: ['ss'],

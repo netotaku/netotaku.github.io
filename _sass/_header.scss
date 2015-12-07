@@ -2,7 +2,7 @@
 
 }
 .fixed-header{
-  padding: 0px 20px;
+  height: 74px;
   line-height: 74px;
   display: none;
   position: fixed;
@@ -19,6 +19,14 @@
   }
   .name{
     font-weight: 900;
+  }
+  &__name{
+    background: red;
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 1.1em;
+    height: 74px;
+    line-height: 74px;
   }
   .mini-menu{
     position: absolute;
