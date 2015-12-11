@@ -16,7 +16,6 @@
 <script type="text/html" id="commits">
   <ul class="paginate updates">
     <% for(var i = 0; i < commits.length; i++) { %>
-      <% console.log(commits[i].commit.message) %>
       <li>
         <span class="message"><%=commits[i].commit.message %></span>
         <span class="date"><a href="<%=commits[i].html_url %>">
@@ -60,8 +59,6 @@
 
 
     $.getJSON('https://api.github.com/repos/netotaku/netotaku.github.io/commits', function(data){
-
-      console.log(data);
 
       var tmp = _.template($('#commits').html());
 
