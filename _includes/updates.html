@@ -1,24 +1,13 @@
+
+
+
 <section class="section updates">
   <div class="container">
     <div class="eight columns">
       <div class="type">
         <h2>Updates</h2>
       </div>
-      <ul class="paginate">
-        {% for post in site.posts %}
-        <li class="type">
-          <article class="post">
-            <header>
-              <time class="time"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</time>
-              <h2>
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </h2>
-              <div class="comment-count"><i class="fa fa-comment"></i> <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" class="count">comments</a></span></div>
-            </header>
-          </article>
-        </li>
-        {% endfor %}
-      </ul>
+      <p id="updates">Loading updates ...</p>
     </div>
     <div class="four columns">
 

@@ -1,0 +1,14 @@
+.updates{
+    padding-bottom: 20px;
+    li{
+      padding-bottom: 10px;
+      .message{
+        display: block;
+        font-size: 1.4em;
+        // font-weight: 900;
+      }
+      .date{
+        color: #666;
+      }
+    }
+}
