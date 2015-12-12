@@ -17,9 +17,7 @@
   <ul class="paginate updates">
     <% for(var i = 0; i < commits.length; i++) { %>
       <li>
-        <span class="message"><%=commits[i].commit.message %></span>
-        <span class="date"><a href="<%=commits[i].html_url %>">
-          <%=commits[i].sha.substring(0,6) %></a> | <%=$.timeago(commits[i].commit.author.date) %></span>
+        <a class="commit" href="<%=commits[i].html_url %>"><%=commits[i].sha.substring(0,6) %></a> <%=commits[i].commit.message %>
       </li>
     <% } %>
   </ul>
@@ -73,7 +71,7 @@
       ///
 
       var commit = data[0].commit;
-      $('#last-updated').html('Last updated <a href="' + commit.url + '" target="_blank">' + $.timeago(commit.author.date) + '</a>');
+      $('.last-updated').html('Last updated <a href="' + commit.url + '" target="_blank">' + $.timeago(commit.author.date) + '</a>');
     });
 
 
@@ -89,7 +87,7 @@
 
     var paginator = function($el){
       var $lis = $el.children('li'),
-          lisPerPage = 4,
+          lisPerPage = 6,
           cursor = 0,
           totalPages = Math.ceil( $lis.length / lisPerPage ),
           turn = function(i){
@@ -102,7 +100,7 @@
             }
           };
 
-          console.log(lisPerPage < $lis.length);
+          // console.log(lisPerPage < $lis.length);
 
       if(lisPerPage < $lis.length){
 

@@ -1,7 +1,7 @@
 .updates{
     padding-bottom: 20px;
     li{
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
       .message{
         display: block;
         font-size: 1.4em;
@@ -9,6 +9,9 @@
       }
       .date{
         color: #666;
+      }
+      .commit{
+        font-family: monospace;
       }
     }
 }
