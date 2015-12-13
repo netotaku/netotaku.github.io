@@ -38,7 +38,7 @@
 
     $('.down-arrow').on('click', function(e){
       e.preventDefault();
-      $("html, body").animate({ scrollTop: $('[role=main]').offset().top }, 450);
+      $("html, body").animate({ scrollTop: ($('[role=main]').offset().top-$('.fixed-header').height()) }, 450);
     });
 
     $('.action').on('click', function(e){
@@ -75,7 +75,7 @@
     });
 
 
-    function scrollTest{
+    function scrollTest(){
       return $window.scrollTop() > $burger.height();
     }
 
@@ -127,11 +127,6 @@
         turn(cursor);
       }
     }
-
-    ////////
-
-
-
 
   })(jQuery);
 
