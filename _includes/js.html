@@ -75,8 +75,12 @@
     });
 
 
-    $window.on('scroll load', function(){
-      if($window.scrollTop() > $burger.height()){
+    function scrollTest{
+      return $window.scrollTop() > $burger.height();
+    }
+
+    $window.on('scroll load touchup', function(){
+      if(scrollTest()){
         $body.addClass('scrolling');
       } else {
         $body.removeClass('scrolling');
