@@ -79,7 +79,7 @@
       return $window.scrollTop() > $burger.height();
     }
 
-    $window.on('scroll load touchup', function(){
+    $window.on('scroll load touchend', function(){
       if(scrollTest()){
         $body.addClass('scrolling');
       } else {
