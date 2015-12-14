@@ -4,11 +4,10 @@
 .fixed-header{
   height: 74px;
   line-height: 74px;
-  display: none;
+  // display: none;
   position: fixed;
   z-index: 2;
   width: 100%;
-  background: rgba(0,0,0,.4);
   color: #fff;
   .action{
     color: #fff;
@@ -22,8 +21,8 @@
     display: block;
   }
   &__name{
+    display: none;
     background: red;
-    display: inline-block;
     padding: 0px 20px;
     font-size: 1.1em;
     height: 74px;
@@ -44,14 +43,14 @@
 
 .scrolling{
   .fixed-header{
-    display: block;
+    background: rgba(0,0,0,.4);
+    &__name{
+      display: inline-block;
+    }
   }
 }
 
 @media (max-width: 499px) {
-  .role{
-  // display: none;
-  }
   .link{
     span{
       display: none;

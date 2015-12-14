@@ -76,7 +76,8 @@
 
 
     function scrollTest(){
-      return $window.scrollTop() > $burger.height();
+      // return $window.scrollTop() > $burger.height();
+      return $window.scrollTop() > 0;
     }
 
     $window.on('scroll load touchend', function(){
