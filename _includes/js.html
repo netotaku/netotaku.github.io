@@ -1,5 +1,5 @@
 
-<script type="text/html" id="paginator">
+<script type="text/html" id="tmp-paginator">
   <ul class="pagination">
     <li><a href="#">&laquo;</a></li>
       <% for(var i = 1; i <= pages; i++) { %>
@@ -13,13 +13,23 @@
   </ul>
 </script>
 
-<script type="text/html" id="commits">
-  <ul class="paginate updates">
-    <% for(var i = 0; i < commits.length; i++) { %>
+<script type="text/html" id="tmp-commits">
+  <ul class="updates ellipsis">
+    <% for(var i = 0; i < 3; i++) { %>
       <li>
         <a class="commit" href="<%=commits[i].html_url %>"><%=commits[i].sha.substring(0,6) %></a> <%=commits[i].commit.message %>
       </li>
     <% } %>
+  </ul>
+</script>
+
+<script type="text/html" id="tmp-posts">
+  <ul class="paginate posts ellipsis">
+    <% $.each(posts, function(){ %>
+      <li>
+        <a href="<%=this.short_url %>" target="_blank"><%=this.summary %></a>
+      </li>
+    <% }); %>
   </ul>
 </script>
 
@@ -58,15 +68,11 @@
 
     $.getJSON('https://api.github.com/repos/netotaku/netotaku.github.io/commits', function(data){
 
-      var tmp = _.template($('#commits').html());
+      var tmp = _.template($('#tmp-commits').html());
 
       $('#updates').replaceWith(tmp({
         commits: data
       }));
-
-      $(".paginate").each(function(){
-        new paginator($(this));
-      });
 
       ///
 
@@ -109,7 +115,7 @@
 
       if(lisPerPage < $lis.length){
 
-        var tmp = _.template($('#paginator').html());
+        var tmp = _.template($('#tmp-paginator').html());
 
         var $pagination = $(tmp({
           pages: totalPages,
@@ -129,6 +135,24 @@
       }
     }
 
+    /////
+
+    $.getJSON('http://api.tumblr.com/v2/blog/workers-playtime.tumblr.com/posts/?callback=?',{
+        api_key: 'wAuLcaDqkNDjaO27eqpsmeDHmcZnLS4M4X06Wf5libRIR2X1Az'
+    }, function(data){
+
+      var tmp = _.template($('#tmp-posts').html());
+
+      $('#posts').replaceWith(tmp({
+        posts: data.response.posts
+      }));
+
+      $(".paginate").each(function(){
+        new paginator($(this));
+      });
+
+    })
+
   })(jQuery);
 
   /////
@@ -139,4 +163,5 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-59040010-1', 'auto');
   ga('send', 'pageview');
+
 </script>

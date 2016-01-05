@@ -160,6 +160,17 @@ blockquote{
   }
 }
 
+.ellipsis{
+  li{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.posts{
+  margin-bottom: 30px;
+}
+
 // .dismissable{
 //   display: none;
 // }
