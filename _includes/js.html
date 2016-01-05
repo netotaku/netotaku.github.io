@@ -27,7 +27,7 @@
   <ul class="paginate posts ellipsis">
     <% $.each(posts, function(){ %>
       <li>
-        <a href="<%=this.short_url %>" target="_blank"><%=this.summary %></a>
+        <a href="<%=this.short_url %>" target="_blank"><%=this.date.substring(0,10) %></a> <%=this.summary %>
       </li>
     <% }); %>
   </ul>
