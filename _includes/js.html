@@ -24,12 +24,19 @@
 </script>
 
 <script type="text/html" id="tmp-posts">
-  <ul class="paginate posts ellipsis">
-    <% $.each(posts, function(){ %>
-      <li>
-        <a href="<%=this.short_url %>" target="_blank"><%=this.date.substring(0,10) %></a> <%=this.summary %>
-      </li>
-    <% }); %>
+  <ul class="paginate posts">
+    <% $.each(posts, function(){
+      if(this.summary != '') { %>
+        <li>
+          <a href="<%=this.short_url %>" target="_blank">
+            <article>
+              <p><time><i class="fa fa-clock-o"></i> <%=this.date.substring(0,10) %></time></p>
+              <h1><%=this.summary %></h1>
+            </article>
+          </a>
+        </li>
+    <% }
+    }); %>
   </ul>
 </script>
 
@@ -98,7 +105,7 @@
 
     var paginator = function($el){
       var $lis = $el.children('li'),
-          lisPerPage = 6,
+          lisPerPage = 4,
           cursor = 0,
           totalPages = Math.ceil( $lis.length / lisPerPage ),
           turn = function(i){
