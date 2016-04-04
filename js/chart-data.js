@@ -212,8 +212,8 @@ var projects = [
     status: 0,
     agency: ['fr']
   },{
-    label: 'CreditCall',
-    url: 'http://www.creditcall.com',
+    label: 'Creditcall',
+    url: 'https://www.creditcall.com',
     frameworks: ['wp','jQ'],
     lang: ['html','sass','js'],
     roles: ['fed','ted','des'],
